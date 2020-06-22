@@ -1,0 +1,8 @@
+{
+    "mongoDB": {
+        "local": "'mongodb://localhost:27017/Datos'",
+        "web1": "mongodb+srv://jdmc95092206565:jdmc95092206565@cluster0.u4h6w.mongodb.net/<dbname>?retryWrites=true&w=majority",
+        "web": "mongodb+srv://nsg:nsg123@cluster0-x3ldm.mongodb.net/<dbname>?retryWrites=true&w=majority",
+        "clave":"juanmahecha950922"
+      }
+}

@@ -1,0 +1,117 @@
+$fontFamily: "Roboto Slab", serif;
+$backgroundColor: #262626;
+$color1: black;
+$color2: white;
+$color3: #c0c0c0;
+$color4: rgb(179, 0, 0);
+
+.site-wrapper {
+  padding: 0rem;
+  min-height: 70vh;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+  font-family: $fontFamily;
+  border-bottom: 1px solid $color1;
+  display: flex;
+  align-items: center;
+  background-color: $backgroundColor;
+  height: 20px;
+}
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+  border-top: 1px solid $color1;
+  text-align: right;
+}
+header,
+footer {
+  padding: 1rem 0;
+}
+
+.logo {
+  
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  color: $color2;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 3px 2px 2px $color4;
+  line-height: 50px;
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.site-nav {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+.site-nav ul {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  font-size: 1rem;
+}
+.site-nav a {
+  text-decoration: none;
+  color: $color2;
+  text-shadow: 2px 3px 3px $color4;
+}
+.site-nav li + li a {
+  margin-left: 1.1rem;
+}
+
+.button {
+  font-family: $fontFamily;
+  font-size: 1rem;
+  color: $color2;
+  box-shadow: 0 0 10px 0 rgba(180, 76, 86, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(120deg, $color4, $color3);
+  background-origin: border-box;
+  box-shadow: 10px 400px 4px $backgroundColor inset;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  margin-right: 0.5rem;
+  border-radius: 50rem;
+  position: relative;
+  transition: 0.4s;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+.button + .button {
+  margin-left: 0.5rem;
+}
+.button-green {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(120deg, $color3, $color4);
+
+  &:hover {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,46 @@
+.inicio {
+  width: 100%;
+
+  .t {
+    width: 50%;
+    margin: auto;
+
+    #titulo {
+      text-align: center;
+      color: whitesmoke;
+    }
+  }
+}
+
+
+.botones {
+  width: 100%;
+  margin-bottom: 3px;
+  border-bottom: 1px whitesmoke solid;
+
+  .btns {
+    max-width: 100%;
+    min-width: 70%;
+    text-align: center;
+    margin: auto;
+
+    #na,
+    #ca,
+    #sa,
+    #eu,
+    #af,
+    #as,
+    #oc {
+      width: 10%;
+      margin: 5px;
+      border: 1px red solid;
+      background-color: black;
+      color: whitesmoke;
+
+      &:hover {
+        background-color: #019301;
+        border: #019301 1px solid;
+      }
+    }
+  }
+}

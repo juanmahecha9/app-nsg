@@ -1,0 +1,94 @@
+.container {
+    opacity: 0.8;
+}
+
+#contenido {
+    width: 100%;
+    display: flex;
+
+    #oceania {
+        width: 20%;
+        max-height: 700px;
+        overflow-y: scroll;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+#oceania {
+    text-align: center;
+    color: whitesmoke;
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .lista-paises {
+        color: whitesmoke;
+        text-align: justify;
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: whitesmoke;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:2000px) {
+    #contenido {
+        width: 100%;
+        display: flex;
+
+        #oceania {
+            width: 20%;
+            min-height: 650px;
+            overflow-y: scroll;
+        }
+
+        .container {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (min-width:1300px) {
+    #contenido {
+        width: 100%;
+        display: flex;
+
+        #oceania {
+            width: 20%;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .container {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (min-width:820px) {
+    #contenido {
+        width: 100%;
+        display: flex;
+
+        #oceania {
+            width: 25%;
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .container {
+            width: 70%;
+        }
+    }
+    
+}

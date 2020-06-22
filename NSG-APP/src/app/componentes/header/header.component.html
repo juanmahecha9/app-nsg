@@ -1,0 +1,20 @@
+<header>
+  <a class="logo">N.S.G</a>
+  <nav class="site-nav">
+    <ul>
+      <li><a routerLink="/inicio">Inicio</a></li>
+      <li><a routerLink="datos/covid" (click)="cargar()">Datos Covid-19</a></li>
+      <li><a routerLink="/world-map">Game</a></li>
+    </ul>
+  </nav>
+
+  <ng-container *ngIf="!auth.loggedIn(); else cerrarSesion">
+    <a class="button" routerLink="/inicio-sesion">Inicio S.</a>
+    <a class="button button-green" routerLink="/registro">Registro</a>
+  </ng-container>
+
+  <ng-template #cerrarSesion>
+    <a class="button button-green" (click)="cerrar()">Logout</a>
+  </ng-template>
+
+</header>

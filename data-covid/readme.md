@@ -1,0 +1,1 @@
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/user/Desktop/data-covid/private/credencial-fire-base.json"

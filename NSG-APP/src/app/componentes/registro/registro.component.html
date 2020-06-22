@@ -1,0 +1,28 @@
+<div class="contenedorForm">
+    <form class="formulario" (submit)="registro()">
+        <h1>Registro</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-biohazard icon"></i>
+                <input type="text" placeholder="Nombre Completo" name="nombre" id="nombre" #nombre="ngModel"
+                [(ngModel)]="user.name" autofocus required > 
+            </div>
+    
+            <div class="input-contenedor">
+                <i class="far fa-envelope icon"></i>
+                <input required type="text" placeholder="E-Mail" name="email" id="email" #nombre="ngModel"
+                [(ngModel)]="user.email" required> 
+            </div>
+    
+            <div class="input-contenedor">
+                <i class="fas fa-unlock-alt icon"></i>
+                <input required type="password" placeholder="Contraseña" name="password" id="password" #nombre="ngModel"
+                [(ngModel)]="user.password" required>
+            </div>
+    
+            <input type="submit" value="Registrate" class="button" id="btn">
+            <p>Al registrarte, aceptas nuestras Condiciones de uso, Política de privacidad y protección de datos.</p>
+            <p>¿Ya tienes una cuenta? <a class="link" routerLink="/inicio-sesion">Iniciar Sesion</a></p>
+        </div>
+    </form>
+</div>
