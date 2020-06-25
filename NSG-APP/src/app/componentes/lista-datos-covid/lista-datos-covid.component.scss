@@ -1,58 +1,24 @@
-h1 {
-  color: whitesmoke;
-  text-align: center;
-}
-.th1 {
-  color: whitesmoke;
-  text-align: justify;
+/* Visit https://nicolaskadis.info/posts/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation */
+
+/* for demo purposes */
+.card {
+  margin: 10px 10px;
+  opacity: 0.7;
 }
 
-.contenido {
+/* Flip Cards CSS */
+.card-container {
+  display: grid;
+  perspective: 700px;
+}
+
+.scrollx{
   width: 100%;
-  opacity: 0.7;
-  #indicativo {
-    width: 60%;
-    margin: auto;
-    .indicativo {
-      margin: auto;
-      width: 40%;
-      text-align: center;
-    }
-  }
-  #pais {
-    width: 80%;
-    //margin: auto;
-    .pais {
-      margin: auto;
-      width: 100%;
-      text-align: center;
-    }
-  }
-  #casos {
-    width: 80%;
-    margin: auto;
-    .casos {
-      margin: auto;
-      width: 60%;
-      text-align: center;
-    }
-  }
-  #mortalidad {
-    width: 80%;
-    margin: auto;
-    .mortalidad {
-      margin: auto;
-      width: 60%;
-      text-align: center;
-    }
-  }
-  #muertes {
-    width: 80%;
-    margin: auto;
-    .muertes {
-      margin: auto;
-      width: 60%;
-      text-align: center;
-    }
-  }
+ height: 1000px;
+  overflow: scroll;
+}
+
+h1, h5 {
+text-align: center;
+color: whitesmoke ;
 }

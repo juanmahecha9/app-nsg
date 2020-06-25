@@ -12,18 +12,18 @@
   }
 }
 
-
 .botones {
   width: 100%;
   margin-bottom: 3px;
   border-bottom: 1px whitesmoke solid;
-
+  display: grid;
   .btns {
     max-width: 100%;
     min-width: 70%;
     text-align: center;
     margin: auto;
-
+    display: grid;
+    grid-template-columns: auto auto auto;
     #na,
     #ca,
     #sa,
@@ -31,12 +31,12 @@
     #af,
     #as,
     #oc {
-      width: 10%;
+      width: 80%;
       margin: 5px;
       border: 1px red solid;
       background-color: black;
       color: whitesmoke;
-
+font-size: 15px;
       &:hover {
         background-color: #019301;
         border: #019301 1px solid;
@@ -44,3 +44,5 @@
     }
   }
 }
+
+

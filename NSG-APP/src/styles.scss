@@ -4,13 +4,30 @@
   margin: 0px;
 }
 
-body {
+
+body{
   background-image: url("./assets/fondo.jpg");
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   box-sizing: border-box;
+}
+
+@media(max-width: 800px){
+  body{
+    width: 100%;
+    background-image: url("./assets/fondo.jpg");
+    background-size: contain;
+  }
+}
+
+@media(max-width: 600px){
+  body{
+    width: 100%;
+    background-image: url("./assets/fondo.jpg");
+    background-size: contain;
+  }
 }

@@ -4,6 +4,91 @@
   integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
   crossorigin="anonymous"
 />
+<br>
+<h1>LISTADO DE PAISES</h1>
+<h5>ORGANIZADO POR EL MAYOR NÚMERO DE CASOS AL MENOR</h5>
+<br>
+
+<div class="container scrollx">
+  <div class="row">
+    <div *ngFor="let producto of productosEncontrados">
+      <div class="card-deck text-white bg-dark mb-3" style="max-width: 18rem;">
+        <div class="card-block">
+          <div class="pd-5">
+            <h4 class="card-title">{{ producto.pais }}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">
+              Total de casos: {{ producto.casos }}
+            </h6>
+            <p class="card-text">
+              Ocupando la posición # {{ producto.indicativo }}
+            </p>
+            <p class="card-text">
+              Su numero total de muertes es:<br />
+              <i style="text-align: center;">{{ producto.muertes }}</i>
+            </p>
+            <a class="card-link"
+              >El covid representa una mortalidad del:
+              {{ producto.mortalidad }}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="container pd-5">
+  <h1 class="card-title">Listado datos <br />Covid-19</h1>
+  <br />
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">PAIS</th>
+        <th scope="col">CASOS</th>
+        <th scope="col">MOSRTALIDAD</th>
+        <th scope="col">MUERTES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="contenido" *ngFor="let producto of productosEncontrados">
+        <th scope="col">
+          <i class="text-center">
+            {{ producto.indicativo }}
+          </i>
+        </th>
+        <th>
+          <i class="text">
+            {{ producto.pais }}
+          </i>
+        </th>
+        <th>
+          <i>
+            {{ producto.casos }}
+          </i>
+        </th>
+        <th>
+          <i>
+            {{ producto.mortalidad }}
+          </i>
+        </th>
+        <th>
+          <i>
+            {{ producto.muertes }}
+          </i>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+<!-- <link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+  crossorigin="anonymous"
+/>
 
 <div class="container pd-5">
   <h1 class="card-title">Listado datos <br>Covid-19</h1>
@@ -76,4 +161,4 @@
 
 
 
-</div>
+</div> -->
