@@ -98,5 +98,3 @@ const resultado = request(URL, function (error, response, body) {
 const message = () => {
   console.log("Datos covid-19: conectado");
 };
-
-

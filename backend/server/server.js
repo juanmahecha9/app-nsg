@@ -2,7 +2,7 @@
 const express = require("express"),
   mongoose = require("mongoose"),
   morgan = require("morgan"),
-  cors = require('cors')
+  cors = require("cors");
 //archivo configuracion puerto y bind
 const config = require("../config/config.json");
 //archivo configuracion rutas
@@ -20,8 +20,8 @@ app.set(
   process.env.BIND
     ? process.env.BIND
     : config.app.bind
-      ? config.app.bind
-      : "127.0.0.1"
+    ? config.app.bind
+    : "127.0.0.1"
 );
 // bind restriccion ip
 /* La IP 127.0.0.1 hace referencia al localhost, un host es cualquier equipo o servidor, así que el host local es cualquiera que estés usando. */
@@ -51,7 +51,6 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
 //rutas
-app.use('/api', router);
-
+app.use("/api", router);
 
 module.exports = app;

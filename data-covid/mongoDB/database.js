@@ -5,9 +5,10 @@ const mongoose = require("mongoose");
 const config = require("../private/app.config.json");
 
 const dbLocal = config.mongoDB.local;
-const dbWeb = config.mongoDB.web;
+const web = config.mongoDB.web;
+const dbWeb = `mongodb+srv://${web}@cluster0-x3ldm.mongodb.net/<dbname>?retryWrites=true&w=majority`;
 
-const url = dbLocal;
+const url = dbWeb;
 //Operador para seleccion del tipo de seleccion de la base de datos mongo y
 //conexion mediante mongoose
 

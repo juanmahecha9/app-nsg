@@ -18,16 +18,22 @@ export class DatosCovidService {
   createData(newData) {
     const params = JSON.stringify(newData);
     /* Convierte la informacion a un archivo json */
-    const options = { headers: new HttpHeaders({ 'Content-type': 'application/json' }) };
+    const options = {
+      headers: new HttpHeaders({ 'Content-type': 'application/json' }),
+    };
     /* Se crea una contante la cual sirve para indicar que la informacion que se enviara es de tipo json */
 
-    return this.http.post(
+    return this.http
+      .post(
         this.url + '/data', //se le indica la ruta de la api
         params, //se indicanlos datos que se envian
         options // se indica que son datos en forma de json
         /*  se retorna el objeto el cual  por medio de http se le encia por medtodo post */
-    ).pipe(res => res) /* convierte datos de entrea en datos de alida para que llegue a la api en forma de respuesta y nos trae la respuesta de nuestra api */
-}
+      )
+      .pipe(
+        (res) => res
+      ); /* convierte datos de entrea en datos de alida para que llegue a la api en forma de respuesta y nos trae la respuesta de nuestra api */
+  }
 
   /* Mostrar los contenidos de la base de datos */
   showData() {

@@ -3,7 +3,7 @@ const User = require("../models/user.model");
 //correo
 const correoV = require("../helpers/registro");
 //token de autenticacion
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 //prueba del servidor
 function prueba(req, res) {
@@ -13,8 +13,26 @@ function prueba(req, res) {
 //Creacion de los procesos de ingreso del usuario a la DB
 const createData = async (req, res) => {
   // CREAR
-  const { name, email, password, ocupation, income, pet, adress, phone } = req.body; //parametros que el envian solicitudes
-  const data = new User({ name, email, password, ocupation, income, pet, adress, phone }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
+  const {
+    name,
+    email,
+    password,
+    ocupation,
+    income,
+    pet,
+    adress,
+    phone,
+  } = req.body; //parametros que el envian solicitudes
+  const data = new User({
+    name,
+    email,
+    password,
+    ocupation,
+    income,
+    pet,
+    adress,
+    phone,
+  }); // Acceder al modelo de mongoDB y se guarda en un avariable para acceder a cada key del objeto
   const correo = data.email;
   const nombre = data.name;
 
@@ -30,7 +48,7 @@ const createData = async (req, res) => {
           statusCode: 400,
         });
       } else {
-        const token = jwt.sign({ _id: newData._id }, 'secretkey');
+        const token = jwt.sign({ _id: newData._id }, "secretkey");
         res.status(200).send({
           status: "Nueva data",
           token: token,
@@ -142,11 +160,11 @@ const login = async (req, res) => {
     user.compararPassword(password, function (err, isMatch) {
       if (err) throw err;
       if (isMatch == true) {
-        const token = jwt.sign({ _id: user._id }, 'secretkey')
-        return res.status(200).send(
-          {
-            value: "Contraseña Valida", token: token
-          });
+        const token = jwt.sign({ _id: user._id }, "secretkey");
+        return res.status(200).send({
+          value: "Contraseña Valida",
+          token: token,
+        });
       }
       if (isMatch != true) return res.status(401).send("Contraseña Invalida");
     });
@@ -154,28 +172,31 @@ const login = async (req, res) => {
 };
 
 const private = (req, res) => {
-  res.json([{
-    nombre: 'Juan',
-    apellido: 'Mahecha'
-  },
-  {
-    nombre: 'Juan David',
-    apellido: 'Mahecha Cruz'
-  }]);
-}
+  res.json([
+    {
+      nombre: "Juan",
+      apellido: "Mahecha",
+    },
+    {
+      nombre: "Juan David",
+      apellido: "Mahecha Cruz",
+    },
+  ]);
+};
 
 function verifyToken(req, res, next) {
   //crear la cabecera de autenticacion
   if (!req.headers.authorization) {
-    return res.status(401).send('No autorizado');
+    return res.status(401).send("No autorizado");
   }
-  const token = req.headers.authorization.split(' ')[1];
-  if (token == 'null') {
-    return res.status(401).sen('No autorizado')
+  const token = req.headers.authorization.split(" ")[1];
+  if (token == "null") {
+    return res.status(401).sen("No autorizado");
   }
-  const data = jwt.verify(token, 'secretkey')
+  const data = jwt.verify(token, "secretkey");
   req.userId = data._id;
-  next(); git
+  next();
+  git;
 }
 
 //borrar todos los datos de una coleccion de mongo.....
@@ -204,7 +225,7 @@ const dropAll = async (req, res) => {
       }
     }
   });
-}
+};
 
 module.exports = {
   prueba,
@@ -215,7 +236,5 @@ module.exports = {
   login,
   private,
   verifyToken,
-  dropAll
+  dropAll,
 };
-
-

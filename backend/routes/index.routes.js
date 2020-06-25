@@ -20,10 +20,10 @@ router.delete("/borrar/:id", control.delateData);
 router.post("/login", control.login);
 
 //borramos todo
-router.delete('/borrado', control.dropAll);
+router.delete("/borrado", control.dropAll);
 
 //Rutas privadas
-router.get('/private',control.verifyToken, control.private)
+router.get("/private", control.verifyToken, control.private);
 
 module.exports = router;
 //exportar las rutas

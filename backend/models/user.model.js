@@ -19,7 +19,7 @@ const user = Schema(
     password: {
       type: String,
       require: true,
-    }
+    },
   },
   {
     timestamps: true,
@@ -66,6 +66,5 @@ user.methods.compararPassword = function (password, cb) {
     cb(null, match);
   });
 };
-
 
 module.exports = mongoose.model("dataUser", user);

@@ -1,6 +1,3 @@
-//Datos del covid
-//const datos = require("../app/covid-19/datos.json");
-
 //Modelo del database
 const Covid = require("../model/paises.covid.model");
 
@@ -11,28 +8,26 @@ const control = async (req, res) => {
 const createData = async (req, res) => {
   await Covid.remove();
 
-  await require("../app/app.scraping");
-
   const datos = require("../app/covid-19/datos.json");
 
   //definir variable de los paises
   let ind = [];
- 
+
   //definir variable de los casos
   let pa = [];
-  
+
   //definir variable para los casos
   let ca = [];
-  
+
   //definir variable para la mortalidad
   let mo = [];
-  
+
   //Definir variable para las muertes
   let mu = [];
-  
+
   //Segundo, Guardar los datos en la DB
   let dtty = [];
-  
+
   for (i = 0; i < 211; i++) {
     ind[i] = datos[i].indicador;
     pa[i] = datos[i].pais;
@@ -56,7 +51,6 @@ const createData = async (req, res) => {
   }
 
   res.send("ok");
-  
 };
 
 function showData(req, res) {

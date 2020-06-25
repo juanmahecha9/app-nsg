@@ -12,36 +12,30 @@ declare global {
 @Component({
   selector: 'app-sur-america',
   templateUrl: './sur-america.component.html',
-  styleUrls: ['./sur-america.component.scss']
+  styleUrls: ['./sur-america.component.scss'],
 })
 export class SurAmericaComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-     /* Definicion del mapa con el uso de la libreria de mapel de jquery */
-     $(".container").mapael({
+    /* Definicion del mapa con el uso de la libreria de mapel de jquery */
+    $('.container').mapael({
       map: {
-        name: "world_countries"
+        name: 'world_countries',
       },
       zoom: {
-        maxLevel: 10
+        maxLevel: 10,
       },
     });
-    $("li").hover(
-      function () {
-        var id = $(this).attr("id");
-        var options1 = { areas: {} };
-        options1.areas[id] = {
-          attrs: {
-            fill: "#91b029",
-          }
-        };
-        $(".container").trigger("update", [
-          { mapOptions: options1, }
-        ]);
-      },
-    );
+    $('li').hover(function () {
+      var id = $(this).attr('id');
+      var options1 = { areas: {} };
+      options1.areas[id] = {
+        attrs: {
+          fill: '#91b029',
+        },
+      };
+      $('.container').trigger('update', [{ mapOptions: options1 }]);
+    });
   }
-
 }

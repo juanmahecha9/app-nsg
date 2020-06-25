@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { Router } from '@angular/router'
-  import { from } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { from } from 'rxjs';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private url = 'http://localhost:3001/api/';
 
-  constructor(private http: HttpClient, private router:Router) {
-
-  }
+  constructor(private http: HttpClient, private router: Router) {}
   /* Solicitus al servidor */
   registro(user) {
     return this.http.post<any>(this.url + '/new', user);
@@ -25,15 +23,14 @@ export class AuthService {
   loggedIn() {
     return !!localStorage.getItem('token');
   }
-  
-  getToken(){
+
+  getToken() {
     return localStorage.getItem('token');
   }
 
-  cerrarS(){
+  cerrarS() {
     localStorage.removeItem('token');
-    this.router.navigate(['/inicio-sesion'])
-    console.log('Cerrar Sesion')
+    this.router.navigate(['/inicio-sesion']);
+    console.log('Cerrar Sesion');
   }
-  
 }

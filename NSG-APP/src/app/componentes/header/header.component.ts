@@ -29,6 +29,7 @@ export class HeaderComponent implements OnInit {
     this.auth.cerrarS();
     alert('Cerrar sesion');
   }
+  
   cargar() {
     this.service.createData(this.Producto).subscribe((res: any) => {
       if (res.statusCode !== 200) {

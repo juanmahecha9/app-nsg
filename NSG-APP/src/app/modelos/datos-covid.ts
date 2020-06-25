@@ -1,4 +1,4 @@
-export class producto{
+export class producto {
   /* Modelo de los datos */
   _id: String;
   indicativo: Number;

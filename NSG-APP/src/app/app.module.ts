@@ -17,11 +17,11 @@ import { BotonesMapaComponent } from './componentes/botones-mapa/botones-mapa.co
 import { AsiaComponent } from './componentes/asia/asia.component';
 import { EuropaComponent } from './componentes/europa/europa.component';
 import { CentroAmericaComponent } from './componentes/centro-america/centro-america.component';
-import { SurAmericaComponent } from './componentes/sur-america/sur-america.component'; 
+import { SurAmericaComponent } from './componentes/sur-america/sur-america.component';
 import { ListaDatosCovidComponent } from './componentes/lista-datos-covid/lista-datos-covid.component';
 
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { from } from 'rxjs';
 /* importar servicos */
 import { AuthGuard } from './auth.guard';
@@ -45,17 +45,15 @@ import { TokenService } from './services/token.service';
     SurAmericaComponent,
     ListaDatosCovidComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [
+    AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenService,
+      multi: true,
+    },
   ],
-  providers: [ AuthGuard,{
-    provide: HTTP_INTERCEPTORS,
-    useClass: TokenService,
-    multi: true
-  }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

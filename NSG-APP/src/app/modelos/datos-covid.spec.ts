@@ -1,7 +1,7 @@
-import { DatosCovid } from './datos-covid';
+import { producto } from './datos-covid';
 
-describe('DatosCovid', () => {
+describe('producto', () => {
   it('should create an instance', () => {
-    expect(new DatosCovid()).toBeTruthy();
+    expect(new producto()).toBeTruthy();
   });
 });
