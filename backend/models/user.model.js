@@ -40,7 +40,7 @@ user.pre("save", function (next) {
   if (!newUser.isModified("password")) return next();
 
   bcrypt
-    .genSalt(10)
+    .genSalt(3)
     .then((salts) => {
       bcrypt
         .hash(this.password, salts)

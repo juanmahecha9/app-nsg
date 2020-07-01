@@ -1,0 +1,79 @@
+svg {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.skull {
+  stroke: blue;
+  stroke-width: 1px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 200;
+  -webkit-animation: skull 10s;
+          animation: skull 10s;
+}
+
+@-webkit-keyframes skull {
+  from {
+    stroke-dashoffset: -3000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes skull {
+  from {
+    stroke-dashoffset: -3000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.nose {
+  stroke: red;
+  stroke-width: 1px;
+  -webkit-animation: blink 1s linear infinite;
+          animation: blink 1s linear infinite;
+}
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.mouth {
+  fill: #59E817;
+  stroke-width: 1px;
+  -webkit-animation: move 1s alternate infinite;
+          animation: move 1s alternate infinite;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+}
+/*# sourceMappingURL=animacion-m.component.css.map */

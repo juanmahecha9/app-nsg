@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <a class="logo">N.S.G</a>
   <nav class="site-nav">
     <ul>
@@ -17,4 +17,29 @@
     <a class="button button-green" (click)="cerrar()">Logout</a>
   </ng-template>
 
-</header>
+</header> -->
+
+
+
+
+<label for="show-menu" class="show-menu">NSG Menu</label>
+<input type="checkbox" id="show-menu" role="button">
+<ul class="navbar" id="menu">
+  <li class="navitem"><a routerLink="/inicio">INICIO</a></li>
+  <li class="navitem"><a routerLink="datos/covid" (click)="cargar()">DATOS COVID</a></li>
+  <li class="navitem"><a routerLink="/world-map">MAPA MUNDIAL</a></li>
+  <li class="navitem"><a >INSTRUCCIONES</a></li>
+  <li class="navitem"><a href=""></a></li>
+  <li class="navitem q1"><a href=""></a></li>
+  <li class="navitem q1"><a href=""></a></li>
+  
+<ng-container *ngIf="!auth.loggedIn(); else cerrarSesion">
+  <li class="navitem"><a routerLink="/inicio-sesion">INICIO S.</a></li>
+   <li class="navitem"><a routerLink="/registro">REGISTRO</a></li>
+  </ng-container>
+  
+  <ng-template #cerrarSesion>
+  <li class="navitem"><a (click)="cerrar()">CERRAR S.</a></li>
+ </ng-template>
+  
+</ul>

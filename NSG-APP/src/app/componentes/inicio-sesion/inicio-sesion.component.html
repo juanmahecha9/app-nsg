@@ -4,18 +4,19 @@
         <div class="contenedor">
             <div class="input-contenedor">
                 <i class="fas fa-biohazard icon"></i>
-                <input type="text" placeholder="Correo electronico" name="email" #nombre="ngModel"
-                [(ngModel)]="user.email" required>
+                <input ngModel required type="text" placeholder="Correo electronico" name="email" #nombre="ngModel"
+                [(ngModel)]="user.email">
             </div>
             <div class="input-contenedor">
                 <i class="fas fa-key icon"></i>
                 <input type="password" placeholder="Contraseña" name="password" #nombre="ngModel"
-                [(ngModel)]="user.password">
+                [(ngModel)]="user.password" ngModel required>
             </div>
             <input type="submit" value="Login" class="button"> 
             <p>Al registrarte, aceptas nuestras Condiciones de uso, Política de privacidad y Protección de Datos.
             </p>
-            <p>¿No tienes una cuenta? <a class="link" routerLink="/registro">Registrate </a></p>
+            <p>¿No tienes una cuenta? <a class="link" routerLink="/inicio">Registrate </a></p>
         </div>
     </form>
 </div>
+

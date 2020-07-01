@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-animacion-inicio',
@@ -10,6 +13,7 @@ export class AnimacionInicioComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

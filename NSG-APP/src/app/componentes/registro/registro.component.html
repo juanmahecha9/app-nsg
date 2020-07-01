@@ -5,19 +5,19 @@
             <div class="input-contenedor">
                 <i class="fas fa-biohazard icon"></i>
                 <input type="text" placeholder="Nombre Completo" name="nombre" id="nombre" #nombre="ngModel"
-                [(ngModel)]="user.name" autofocus required > 
+                [(ngModel)]="user.name" autofocus ngModel required > 
             </div>
     
             <div class="input-contenedor">
                 <i class="far fa-envelope icon"></i>
                 <input required type="text" placeholder="E-Mail" name="email" id="email" #nombre="ngModel"
-                [(ngModel)]="user.email" required> 
+                [(ngModel)]="user.email" ngModel required> 
             </div>
     
             <div class="input-contenedor">
                 <i class="fas fa-unlock-alt icon"></i>
                 <input required type="password" placeholder="Contraseña" name="password" id="password" #nombre="ngModel"
-                [(ngModel)]="user.password" required>
+                [(ngModel)]="user.password" ngModel required>
             </div>
     
             <input type="submit" value="Registrate" class="button" id="btn">

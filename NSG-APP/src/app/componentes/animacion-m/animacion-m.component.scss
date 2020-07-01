@@ -1,0 +1,51 @@
+
+
+svg {
+    background: rgba($color: #000000, $alpha: 0.5);
+   
+   
+     //position: absolute;
+    
+  }
+  
+  .skull {
+    stroke: blue;
+    stroke-width: 1px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200;
+    animation: skull 10s;
+  
+  }
+  
+  @keyframes skull {
+    from {
+      stroke-dashoffset: -3000
+    }
+    
+    to {
+      stroke-dashoffset:0; 
+    }
+  }
+  
+  .nose {
+    stroke: red;
+    stroke-width: 1px;
+    animation: blink 1s linear infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  .mouth {
+    fill: #59E817;
+    stroke-width: 1px;
+    animation: move 1s alternate infinite;
+  }
+  
+  @keyframes move {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
+  }

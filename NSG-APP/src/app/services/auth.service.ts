@@ -6,7 +6,7 @@ import { from } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private url = 'http://localhost:3001/api/';
+  private url = 'https://nsglogin.herokuapp.com/api/';
 
   constructor(private http: HttpClient, private router: Router) {}
   /* Solicitus al servidor */

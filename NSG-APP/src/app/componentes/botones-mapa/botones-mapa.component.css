@@ -1,0 +1,59 @@
+.inicio {
+  width: 100%;
+}
+
+.inicio .t {
+  width: 50%;
+  margin: auto;
+}
+
+.inicio .t #titulo {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.botones {
+  width: 100%;
+  margin-bottom: 3px;
+  border-bottom: 1px whitesmoke solid;
+  display: -ms-grid;
+  display: grid;
+}
+
+.botones .btns {
+  max-width: 100%;
+  min-width: 70%;
+  text-align: center;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.botones .btns #na,
+.botones .btns #ca,
+.botones .btns #sa,
+.botones .btns #eu,
+.botones .btns #af,
+.botones .btns #as,
+.botones .btns #oc {
+  width: 80%;
+  margin: 5px;
+  border: 1px red solid;
+  background-color: black;
+  color: whitesmoke;
+  font-size: 15px;
+}
+
+.botones .btns #na:hover,
+.botones .btns #ca:hover,
+.botones .btns #sa:hover,
+.botones .btns #eu:hover,
+.botones .btns #af:hover,
+.botones .btns #as:hover,
+.botones .btns #oc:hover {
+  background-color: #019301;
+  border: #019301 1px solid;
+}
+/*# sourceMappingURL=botones-mapa.component.css.map */

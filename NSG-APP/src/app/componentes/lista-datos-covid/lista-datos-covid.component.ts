@@ -15,13 +15,15 @@ export class ListaDatosCovidComponent implements OnInit {
   
   constructor(private service: DatosCovidService) {
     /* Instanciar el modelo de información */
-    this.Producto = new producto();
+   // this.Producto = new producto();
   }
 
   ngOnInit(): void {
-    this.mostrarProducto()
+   this.mostrarProducto();
+    // location.reload();
   }
-
+  
+  
   /* Crear el metodo */
   mostrarProducto() {
     /* Nos suscribimos al servicio que creamos y se le indica que nos devuelva una respuesta cualquiera según el caso */
@@ -39,4 +41,6 @@ export class ListaDatosCovidComponent implements OnInit {
       }
     )
   }
+
+
 }

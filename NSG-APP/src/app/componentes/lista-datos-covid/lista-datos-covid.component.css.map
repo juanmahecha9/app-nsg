@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,uHAAuH;AAEvH,uBAAuB;AACvB,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,SAAS;EACjB,OAAO,EAAE,GAAG;CACb;;AAED,oBAAoB;AACpB,AAAA,eAAe,CAAC;EACd,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,KAAK;CACnB;;AAED,AAAA,QAAQ,CAAA;EACN,KAAK,EAAE,IAAI;EACZ,MAAM,EAAE,MAAM;EACb,QAAQ,EAAE,MAAM;CACjB;;AAED,AAAA,EAAE,EAAE,EAAE,CAAC;EACP,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,UAAW;CACjB;;AAED,AAAA,aAAa,CAAA;EACb,UAAU,EAAE,MAAM;CACjB",
+    "sources": [
+        "lista-datos-covid.component.scss"
+    ],
+    "names": [],
+    "file": "lista-datos-covid.component.css"
+}

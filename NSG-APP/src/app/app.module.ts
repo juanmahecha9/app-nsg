@@ -27,6 +27,13 @@ import { from } from 'rxjs';
 import { AuthGuard } from './auth.guard';
 import { TokenService } from './services/token.service';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { AudioMapaComponent } from './componentes/audio-mapa/audio-mapa.component';
+import { AudioDatosCovidComponent } from './componentes/audio-datos-covid/audio-datos-covid.component';
+import { AnimacionMComponent } from './componentes/animacion-m/animacion-m.component';
+import { BatallaComponent } from './componentes/batalla/batalla.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +51,12 @@ import { TokenService } from './services/token.service';
     CentroAmericaComponent,
     SurAmericaComponent,
     ListaDatosCovidComponent,
+    AudioMapaComponent,
+    AudioDatosCovidComponent,
+    AnimacionMComponent,
+    BatallaComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     AuthGuard,
     {

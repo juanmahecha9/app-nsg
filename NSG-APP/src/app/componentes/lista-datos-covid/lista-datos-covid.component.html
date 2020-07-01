@@ -5,17 +5,20 @@
   crossorigin="anonymous"
 />
 
+
+<app-audio-datos-covid></app-audio-datos-covid>
+
 <br />
 <h1>LISTADO DE PAISES</h1>
 <h5>ORGANIZADO POR EL MAYOR NÚMERO DE CASOS AL MENOR</h5>
 <br />
 
 <div class="container" style="text-align: center;">
-  <div class="card">
+    <div class="card">
     <div class="card-body">
       <h5 class="text-black" style="color: black;">Categorias paises</h5>
       <p class="card-text">Rojo: primeros 50 paises de la lista <br> Amarillo: pasies del 51 al 150. <br> Verde: paises en 150 a 211 <br> Negro: paises con menos de 50 casos confimados</p>
-      <button type="button" class="btn btn-primary">Button</button>
+      <button type="button" class="btn btn-primary" (click)="mostrarProducto()">MOSTRAR DATOS MUNDIALES SARS COV 2</button>
     </div>
   </div>
 </div>
@@ -23,7 +26,7 @@
 <div class="container scrollx">
   <div class="row">
     <div *ngFor="let producto of productosEncontrados">
-      <div
+               <div
         class="card text-white mb-3"
         [ngClass]="{
           'bg-danger': producto.indicativo <= '50',
@@ -34,11 +37,12 @@
         }"
         style="max-width: 18rem;"
       >
-        <div class="card-block textoalienar">
+      
+        <div class="card-block textoalienar pd-5">
           <div class="pd-5">
-            <h4 class="card-title">{{ producto.pais }}</h4>
-            <h6 class="card-subtitle mb-2">
-              Total de casos: {{ producto.casos }}
+            <h4 style="font-size: 35px; " class="card-title">{{ producto.pais }}</h4>
+            <h6 style="font-size: 30px;" class="card-subtitle mb-2">
+              Total de casos:<br> {{ producto.casos }}
             </h6>
             <p class="card-text">
               Ocupando la posición # {{ producto.indicativo }}

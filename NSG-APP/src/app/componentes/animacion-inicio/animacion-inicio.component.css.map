@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,OAAO,EAAE,IAAI;EACb,gBAAgB,EAAe,kBAAO;CACzC;;AACD,AAAA,CAAC,CAAA;EACG,UAAU,EAAE,OAAO;EACnB,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,KAAK,EAAE,UAAU;CACpB",
+    "sources": [
+        "animacion-inicio.component.scss"
+    ],
+    "names": [],
+    "file": "animacion-inicio.component.css"
+}
