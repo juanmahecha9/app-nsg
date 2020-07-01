@@ -1,4 +1,4 @@
-.container {
+/* .container {
     opacity: 0.8;
   }
   
@@ -145,4 +145,45 @@
       }
     }
   }
+    */
+
    
+    .card {
+      height: 150px;
+      margin: 4px 4px;
+      transition: .6s ease;
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    .card-block {
+     //  padding: 10px;
+     text-align: center;
+    }
+    
+    .scrollcards {
+     // background-color: #fff;
+      overflow: auto;
+     // white-space: nowrap;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+        background: transparent;
+    }
+    
+    div.scrollcards .card {
+        display: inline-block;
+        padding: 14px;
+        text-decoration: none;
+        height: auto; 
+        width: 150px;
+    }
+    
+    img{
+      width: 50%;
+      height: 50px;
+    }

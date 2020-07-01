@@ -29,6 +29,7 @@ export class ListaDatosCovidComponent implements OnInit {
     /* Nos suscribimos al servicio que creamos y se le indica que nos devuelva una respuesta cualquiera según el caso */
     this.service.showData().subscribe((response: any) => {
       this.productosEncontrados = response.producto;
+      alert('Recargando los datos')
       /* el contador for nos muestra como respuesta cada producto */
     },
       (error) => {

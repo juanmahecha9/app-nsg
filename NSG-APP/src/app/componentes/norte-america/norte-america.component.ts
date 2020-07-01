@@ -20,6 +20,8 @@ export class NorteAmericaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   
+   
     /* Definicion del mapa con el uso de la libreria de mapel de jquery */
     $(".container").mapael({
       map: {
@@ -29,7 +31,7 @@ export class NorteAmericaComponent implements OnInit {
         maxLevel: 10
       },
     });
-    $("li").hover(
+    $("div").hover(
       function () {
         var id = $(this).attr("id");
         var options1 = { areas: {} };
