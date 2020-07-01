@@ -22,7 +22,7 @@ import { ListaDatosCovidComponent } from './componentes/lista-datos-covid/lista-
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/registro',
+    redirectTo: '/inicio',
     pathMatch: 'full',
   },
   {

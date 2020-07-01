@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
       if (res.statusCode !== 200) {
         alert("Error, recarge de nuevo");
       } else {
-        window.location.reload();
+        
       }
     });
   }
