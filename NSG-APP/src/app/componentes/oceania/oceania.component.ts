@@ -28,7 +28,7 @@ export class OceaniaComponent implements OnInit {
         maxLevel: 10
       },
     });
-    $("li").hover(
+    $("div").hover(
       function () {
         var id = $(this).attr("id");
         var options1 = { areas: {} };

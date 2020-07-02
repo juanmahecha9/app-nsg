@@ -12,7 +12,7 @@ import { MapaComponent } from './componentes/mapa/mapa.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { NorteAmericaComponent } from './componentes/norte-america/norte-america.component';
 import { OceaniaComponent } from './componentes/oceania/oceania.component';
-import { AfricaComponent } from './componentes/africa/africa.component';
+
 import { BotonesMapaComponent } from './componentes/botones-mapa/botones-mapa.component';
 import { AsiaComponent } from './componentes/asia/asia.component';
 import { EuropaComponent } from './componentes/europa/europa.component';
@@ -33,6 +33,7 @@ import { AudioMapaComponent } from './componentes/audio-mapa/audio-mapa.componen
 import { AudioDatosCovidComponent } from './componentes/audio-datos-covid/audio-datos-covid.component';
 import { AnimacionMComponent } from './componentes/animacion-m/animacion-m.component';
 import { BatallaComponent } from './componentes/batalla/batalla.component';
+import { AfricaComponent } from './componentes/africa/africa.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { BatallaComponent } from './componentes/batalla/batalla.component';
     HeaderComponent,
     NorteAmericaComponent,
     OceaniaComponent,
-    AfricaComponent,
+    
     BotonesMapaComponent,
     AsiaComponent,
     EuropaComponent,
@@ -55,6 +56,7 @@ import { BatallaComponent } from './componentes/batalla/batalla.component';
     AudioDatosCovidComponent,
     AnimacionMComponent,
     BatallaComponent,
+    AfricaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [

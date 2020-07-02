@@ -13,36 +13,31 @@ declare global {
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
-  styleUrls: ['./mapa.component.scss']
+  styleUrls: ['./mapa.component.scss'],
 })
 export class MapaComponent implements OnInit {
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     /* Definicion del mapa con el uso de la libreria de mapel de jquery */
-    $(".container").mapael({
+    $('.container').mapael({
       map: {
-        name: "world_countries",
+        name: 'world_countries',
       },
       zoom: {
-        maxLevel: 10
+        enabled: true,
+        maxLevel: 100,
       },
     });
-    $("li").hover(
-      function () {
-        var id = $(this).attr("id");
-        var options1 = { areas: {} };
-        options1.areas[id] = {
-          attrs: {
-            fill: "#91b029",
-          }
-        };
-        $(".container").trigger("update", [
-          { mapOptions: options1, }
-        ]);
-      },
-    );
+    $('li').hover(function () {
+      var id = $(this).attr('id');
+      var options1 = { areas: {} };
+      options1.areas[id] = {
+        attrs: {
+          fill: '#91b029',
+        },
+      };
+      $('.container').trigger('update', [{ mapOptions: options1 }]);
+    });
   }
-
 }

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'jquery-mapael';
@@ -30,7 +31,7 @@ export class AfricaComponent implements OnInit {
         maxLevel: 10
       },
     });
-    $("li").hover(
+    $("div").hover(
       function () {
         var id = $(this).attr("id");
         var options1 = { areas: {} };

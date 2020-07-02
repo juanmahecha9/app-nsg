@@ -58,15 +58,17 @@ font-size: 15px;
     margin: auto;
 
     #titulo {
+      font-family: fantasy;
       text-align: center;
       color: whitesmoke;
     }
   }
 }
+
 .continentes{
   width: 100%;
   label{
-    width: 70%;
+    width: 50%;
     margin: auto;
   }
 }
@@ -86,7 +88,7 @@ select {
 label[for=favcity] {
   position: relative;
   display: block;
-  width: 400px;
+  width: 300px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -104,11 +106,12 @@ label[for=favcity]::after {
 }
 
 label[for=favcity] select {
-  border: 5px solid #eeeeee;
-  background: white;
-  padding: 7px 20px 7px 20px;
+  border: 5px solid #000;
+  background: black;
+    color: #ffffff;
+  padding: 5px 5px 5px 5px;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   font-family: monospace;
   cursor: pointer;
 }
@@ -118,13 +121,53 @@ label[for=favcity] select::-ms-expand {
 }
 
 label[for=favcity] :-moz-any(select) {
-  width: 110%;
+  width: 100%;
+
 }
 
 label[for=favcity].ie9 select {
-  width: 110%;
+  width: 100%;
 }
 
 label[for=favcity] select:focus {
   outline: 1px dotted #A9A9A9;
+}
+
+@media (max-width: 600px){
+  .continentes{
+    width: 100%;
+    label{
+      width: 50%;
+      margin: auto;
+      font-size: 15px;
+    }
+  }
+ 
+  .inicio {
+    width: 100%;
+  
+    .t {
+      width: 50%;
+      margin: auto;
+  
+      #titulo {
+        font-size: 13px;
+        font-family: fantasy;
+        text-align: center;
+        color: whitesmoke;
+      }
+    }
+  }
+
+  label[for=favcity] select {
+    border: 2px solid #000;
+    background: black;
+    color: #ffffff;
+    padding: 0;
+    width: 100%;
+    font-size: 12px;
+    font-family: fantasy;
+    cursor: pointer;
+  }
+
 }

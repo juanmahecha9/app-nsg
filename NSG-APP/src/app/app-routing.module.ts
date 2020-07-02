@@ -9,7 +9,7 @@ import { InicioSesionComponent } from './componentes/inicio-sesion/inicio-sesion
 import { RegistroComponent } from './componentes/registro/registro.component';
 /* Componentes del mapa del juego */
 import { MapaComponent } from './componentes/mapa/mapa.component';
-import { AfricaComponent } from './componentes/africa/africa.component';
+import { AfricaComponent } from './componentes/africa/africa.component'
 import { AsiaComponent } from './componentes/asia/asia.component';
 import { EuropaComponent } from './componentes/europa/europa.component';
 import { OceaniaComponent } from './componentes/oceania/oceania.component';

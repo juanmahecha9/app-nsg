@@ -27,7 +27,7 @@ export class SurAmericaComponent implements OnInit {
         maxLevel: 10,
       },
     });
-    $('li').hover(function () {
+    $('div').hover(function () {
       var id = $(this).attr('id');
       var options1 = { areas: {} };
       options1.areas[id] = {
