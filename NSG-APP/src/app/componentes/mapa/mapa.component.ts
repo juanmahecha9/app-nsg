@@ -23,6 +23,7 @@ export class MapaComponent implements OnInit {
     $('.container').mapael({
       map: {
         name: 'world_countries',
+      //  width: 850
       },
       zoom: {
         enabled: true,

@@ -1,8 +1,18 @@
 /* Visit https://nicolaskadis.info/posts/pure-css-flip-cards-using-bootstrap-4-and-css-grid-no-js for an explanation */
 
 /* for demo purposes */
+.carta1{
+  width: 100%;
+  .h12w{
+    width: 50%;
+    margin: auto;
+  }
+}
+.conte{
+  width: 30%;
+}
 .card {
-  margin: 10px 10px;
+    margin: 10px 10px;
   opacity: 0.7;
 }
 
@@ -14,8 +24,8 @@
 
 .scrollx{
   width: 100%;
- height: 1000px;
-  overflow: scroll;
+// height: 1000px;
+
 }
 
 h1, h5 {

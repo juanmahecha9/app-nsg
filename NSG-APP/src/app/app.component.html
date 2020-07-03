@@ -1,4 +1,49 @@
-<app-header></app-header>
 
-<router-outlet></router-outlet>
+   
+        <div class="nav-side-menu">
+            <div class="brand">Naval Sickness Gamble</div>
+            <i
+              class="fa fa-bars fa-2x toggle-btn"
+              data-toggle="collapse"
+              data-target="#menu-content"
+            ></i>
+          
+            <div class="menu-list">
+              <ul id="menu-content" class="menu-content collapse out">
+                <li style="text-align: center;" class="navitem" routerLink="/inicio"><i class="fa fa-rebel" aria-hidden="true"></i>
+                    INICIO</li>
+                <li style="text-align: center;" class="navitem" routerLink="datos/covid" (click)="cargar()"><i class="fa fa-database" aria-hidden="true"></i>
 
+                  DATOS COVID
+                </li>
+                <li style="text-align: center;" class="navitem" routerLink="/world-map"><i class="fa fa-map" aria-hidden="true"></i>
+                    MAPA MUNDIAL</li>
+                <li style="text-align: center;" class="navitem"><i class="fa fa-ravelry" aria-hidden="true"></i>
+                    INSTRUCCIONES</li>
+                <li style="text-align: center;" style="margin-bottom: 10px;"></li>
+                <li
+                  data-toggle="collapse"
+                  data-target="#products"
+                  class="collapsed active"
+                >
+                  <a
+                    ><i class="fa fa-unlock-alt"></i> INICIO<span class="arrow"></span
+                  ></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                  <ng-container *ngIf="!auth.loggedIn(); else cerrarSesion">
+                    <li style="text-align: center;" class="navitem inicio" routerLink="/inicio-sesion">INICIO S.</li>
+                    <li style="text-align: center;" class="navitem inicio" routerLink="/registro">REGISTRO</li>
+                  </ng-container>
+          
+                  <ng-template #cerrarSesion>
+                    <li style="text-align: center;" class="navitem inicio" (click)="cerrar()">CERRAR S.</li>
+                  </ng-template>
+                </ul>
+              </ul>
+            </div>
+          </div>
+    
+    <div class="dos ">
+        <router-outlet [style.background-color]="'blue'"></router-outlet>
+    </div>

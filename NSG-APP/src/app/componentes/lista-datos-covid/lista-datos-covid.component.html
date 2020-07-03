@@ -8,8 +8,13 @@
 <h5>ORGANIZADO POR EL MAYOR NÚMERO DE CASOS AL MENOR</h5>
 <br />
 
-<div class="container" style="text-align: center;">
-    <div class="card">
+
+
+<div class="container scrollx">
+  <div class="container" style="text-align: center;">
+    
+<div class="carta1">
+  <div class="card h12w">
     <div class="card-body">
       <h5 class="text-black" style="color: black;">Categorias paises</h5>
       <p class="card-text">Rojo: primeros 50 paises de la lista <br> Amarillo: pasies del 51 al 150. <br> Verde: paises en 150 a 211 <br> Negro: paises con menos de 50 casos confimados</p>
@@ -18,11 +23,11 @@
   </div>
 </div>
 
-<div class="container scrollx">
+</div>
   <div class="row">
-    <div *ngFor="let producto of productosEncontrados">
+    <div class="conte" *ngFor="let producto of productosEncontrados">
                <div
-        class="card text-white mb-3"
+        class="card text-white "
         [ngClass]="{
           'bg-danger': producto.indicativo <= '50',
           'bg-warning':
