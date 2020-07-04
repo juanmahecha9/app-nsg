@@ -34,7 +34,6 @@ import { AudioDatosCovidComponent } from './componentes/audio-datos-covid/audio-
 import { AnimacionMComponent } from './componentes/animacion-m/animacion-m.component';
 import { BatallaComponent } from './componentes/batalla/batalla.component';
 import { AfricaComponent } from './componentes/africa/africa.component';
-import { TableroPruebaComponent } from './componentes/tablero-prueba/tablero-prueba.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +57,7 @@ import { TableroPruebaComponent } from './componentes/tablero-prueba/tablero-pru
     AnimacionMComponent,
     BatallaComponent,
     AfricaComponent,
-    TableroPruebaComponent,
+    
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
