@@ -146,6 +146,9 @@
     }
   }
    */
+   h5{
+     margin-top: 15px;
+   }
  .margen{
    margin-left: 15px;
  }
@@ -180,13 +183,32 @@ font-size: 12px;text-align: center;
 
 .contenido{
   width: 100%;
-  background-color: rgba($color: #000000, $alpha: 0.3);
+  
   .container{
     width: 80%;
     margin: auto;
     .map{
       width: 50%;
       margin: auto;
+    }
+  }
+}
+
+main{
+  background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+@media (max-width: 767px){
+  .contenido{
+    width: 100%;
+    
+    .container{
+      width: 95%;
+      margin: auto;
+      .map{
+        width: 100%;
+        margin: auto;
+      }
     }
   }
 }
