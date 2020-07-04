@@ -1,6 +1,6 @@
 .contenedorForm {
     width: 100%;
-    margin-top: 250px;
+    margin-top: 100px;
 }
 
 .contenedor {
@@ -9,9 +9,9 @@
 }
 
 .formulario {
-    background-color: rgba(165, 165, 165, .5);
+    background-color: rgba(165, 165, 165, .8);
     margin-top: 1px;
-    padding: 2px;
+    padding: 10px;
 }
 
 h1 {
@@ -80,4 +80,8 @@ p {
         margin-top: 50px;
         border-radius: 2%;
     }
+}
+
+main{
+    background-image: url("../../../assets/fondos/f2168dfb-bd2e-4a22-9250-ef2c1d8e2d35.jpg");
 }
