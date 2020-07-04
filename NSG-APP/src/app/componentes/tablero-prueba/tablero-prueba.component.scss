@@ -1,0 +1,314 @@
+
+h3 {
+    text-align: center;
+}
+/* ------------ 2. classes --------- */
+
+@keyframes clockwise {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes blip {
+   from { opacity: 1; }
+   70% { opacity: .3; }
+   to { opacity: .2; }
+}
+
+
+.title-text-wrapper {
+    background: black;
+    width: 100vw;
+    z-index: 2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: white;
+    
+    
+}
+#game-board-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.game-board-wrapper {
+    height: 100vh;
+    width: 100vw;
+    padding-top: -10vw;
+    background: black;
+   /* // background-image: url("");
+    background-size: cover;
+    background-position: center; */
+    z-index: 2;
+    position: relative;
+
+}
+.game-board  {
+    
+    margin: -12vh auto;
+    position: relative;
+    top: -41vw;
+    z-index: 2;
+}
+
+.radar, .hit, .miss {
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+}
+
+.radar {
+   width: 15vw;
+   height: 40vw;
+   animation-name: clockwise;
+   animation-timing-function: linear;
+   transform-origin: right bottom;
+   background: linear-gradient(70deg, transparent 50%, red), transparent;
+   position: relative; 
+   bottom: 23vh;
+   right: -35vw;
+
+}
+
+.hit {
+   background-image: url("https://drive.google.com/uc?id=15mmB0DtLJZvr4cFwG76JZU1JkjLjnQVe");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   animation-name: blip;
+   animation-timing-function: ease-in-out;
+      
+}
+
+.miss {
+   background-image: url("https://drive.google.com/uc?id=159Q4zIeI1xV6O-Wq19VzouQncfQK-uqN");
+   background-size: 80%;
+   background-repeat: no-repeat;
+   background-position: center;
+   animation-name: blip;
+   animation-timing-function: ease-in-out;
+}
+
+/* ------------ 3. elements -------- */
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    color: red;
+}
+
+td {
+    height: 5vh;
+    width: 5vw;
+    border: 1px solid red;
+}
+
+/* ------------ 4. elements-by-ID -------- */
+
+#message-area {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    margin: 16vh auto;
+    width: 70vw;
+    padding: .2em .5em;
+    border-radius: 0.5em ;
+    background: rgba(165, 12, 12, 0.473);
+    border: 1px solid black;
+}
+
+#message {
+    color: rgb(10, 10, 10);
+}
+
+
+#input-console {
+    position: relative;
+    width: 70vw;
+    right: 0;
+    bottom: 40vw;
+    padding: .2em;
+    border-radius: 0.5em ;
+    background: rgba(177, 11, 11, 0.473) ;
+    border: 1px solid black;
+    color: black;
+    margin: 15vh auto;
+    text-align: center;
+}
+
+#user-input {
+    font-size: 24px;
+    background: rgba(202, 11, 11, 0.473);
+    color: rgb(180, 12, 12);
+    border: 1px solid lightsteelblue;
+    border-radius: .3em;
+
+}
+#fire-button-disarmed {                     /* this is to disable the hover when the button is disarmed after the game ends    */
+    
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 16px;
+    padding: .1em .6em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(91, 101, 114);
+    border-radius: .5em;
+    border: 1px solid black;
+    vertical-align: middle;
+    margin: 5px auto 5px 5px;
+
+}
+#fire-button {
+    
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 16px;
+    padding: .1vh .6vw;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(91, 101, 114);
+    border-radius: .5em;
+    border: 1px solid black;
+    vertical-align: middle;
+
+}
+@keyframes pulse {
+    from { background-color: red;}
+
+    to { background-color: rgba(255, 0, 0, 0.274) ;}
+}
+#fire-button:hover {
+    border: 1px solid rgb(165, 8, 8);
+    color: rgb(155, 15, 15);
+    background-color: red;
+    animation: pulse 0.5s infinite alternate linear;
+}
+/* ------------ 5. media-queries -------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .radar {
+        bottom: 14vh;
+    }
+    #message-area {
+        margin: 15.5vh auto 14vh auto;
+    }
+    #input-console {
+        margin: 12vh auto;
+    }    
+  }
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    h1 {
+        font-size: 18vw;
+    }
+    .game-board-wrapper {
+        height: 85vw;
+        width: 100vw;
+        background-image: url("https://drive.google.com/uc?id=1SKQtCb4rFiOuw08MRHwvbbl06JAsU1qw");
+        padding-top: -10vw;
+        right: 0vw;
+
+    }
+    .radar {
+        bottom: 23vh;
+        right: -35vw;
+        width: 15vw;
+        height: 30vh;
+    }
+    #message-area {
+        margin: 15.5vh auto 16vh auto;
+    }  
+    .game-board  {    
+        margin: 2vh auto;
+        position: relative;
+        top: -41vw;
+        z-index: 2;
+    } 
+    #input-console {
+        margin: 2vh auto;
+    } 
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    .radar {
+        bottom: -2.5vh;
+        right: -35vw;
+        width: 15vw;
+        height: 48vw;
+    }
+    #message-area {
+        font-size: 18px;
+        margin: 15.5vh auto 0vh auto;
+        width: 80vw;
+        height: 3em;
+    }  
+    .game-board  {    
+        margin: 0vh auto;
+        height: 50vh;
+    } 
+    #input-console {
+        width: 80vw;
+        padding: .3em;
+        margin: 2vh auto;
+    } 
+    #user-input {
+        font-size: 22px;
+    }   
+  }
+  @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .game-board-wrapper {
+        height: 100vh;
+        width: 100vw;
+        background-image: url("https://drive.google.com/uc?id=1SKQtCb4rFiOuw08MRHwvbbl06JAsU1qw");
+        padding: 0vh;
+        right: 0vw;
+    }
+    .radar {
+        bottom: 14vh;
+        right: -35vw;
+        width: 15vw;
+        height: 55vh;
+    }
+    #message-area {
+        border: 1px solid rgb(12, 12, 12) !important;
+        font-size: 5vh;
+        margin: 4vh auto 0vh auto;
+        width: 80vw;
+        height: 1.2em;
+    }  
+    .game-board  {  
+        font-size: 4vh;  
+        margin: 26vh auto 0 auto;
+        height: 50vh;
+    } 
+    #input-console {
+        width: 80vw;
+        padding: .1em;
+        margin: 0vh auto;
+    } 
+    #user-input {
+        font-size: 5vh;
+    }   
+  }
+  @media (min-width: 200px) and (max-width: 480px) {
+    .radar {
+        bottom: -9.5vh;
+        right: -35vw;
+        width: 15vw;
+        height: 48vw;
+    }
+    #message-area {
+        font-size: 18px;
+        margin: 15.5vh auto 0vh auto;
+        width: 80vw;
+        height: 3em;
+    }  
+    .game-board  {    
+        margin: 0vh auto;
+        height: 50vh;
+    } 
+    #input-console {
+        width: 80vw;
+        padding: .3em;
+        margin: 2vh auto;
+    } 
+    #user-input {
+        font-size: 22px;
+    }     
+  }  
