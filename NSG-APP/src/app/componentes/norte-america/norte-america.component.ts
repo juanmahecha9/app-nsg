@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'jquery-mapael';
-import 'jquery-mapael/js/maps/world_countries.js';
+//import 'jquery-mapael/js/maps/norte_america.js';
+import '../../../assets/maps/norte_america.js'
 import { AttrAst } from '@angular/compiler';
 
 declare global {
@@ -25,7 +26,8 @@ export class NorteAmericaComponent implements OnInit {
     /* Definicion del mapa con el uso de la libreria de mapel de jquery */
     $(".container").mapael({
       map: {
-        name: "world_countries"
+        name: "norte_america",
+        width: 500
       },
       zoom: {
         maxLevel: 10
