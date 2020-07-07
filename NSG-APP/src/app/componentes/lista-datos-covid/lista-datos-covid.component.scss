@@ -1,8 +1,12 @@
 main{
-  background-image: url("../../../assets/fondos/f2168dfb-bd2e-4a22-9250-ef2c1d8e2d35.jpg");
-  background-attachment: fixed;
-  background-size: contain;
+  background-color: #000;
+ //background-image: url("../../../assets/fondos/0e61a4c1-0360-4ee2-b9bf-9c75c3cd62c4.jpg");
+// background-attachment: fixed;
 } 
+
+*{
+  font-family: fantasy;
+}
 /* for demo purposes */
 .carta1{
   width: 100%;
@@ -38,4 +42,31 @@ color: whitesmoke ;
 
 .textoalienar{
 text-align: center;
+}
+
+.bgr{
+  -webkit-box-shadow: inset -1px 0px 27px 5px rgba(255,0,0,1);
+  -moz-box-shadow: inset -1px 0px 27px 5px rgba(255,0,0,1);
+  box-shadow: inset -1px 0px 27px 5px rgba(255,0,0,1);
+  background-color: #000;
+}
+
+.bgw{
+  -webkit-box-shadow: inset -1px 0px 27px 5px rgb(255, 247, 0);
+  -moz-box-shadow: inset -1px 0px 27px 5px rgba(255, 247, 0);
+  box-shadow: inset -1px 0px 27px 5px rgba(255, 247, 0);
+  background-color: #000;
+}
+
+.bgv{
+  -webkit-box-shadow: inset -1px 0px 27px 5px rgb(0, 255, 21);
+  -moz-box-shadow: inset -1px 0px 27px 5px rgb(0, 255, 21);
+  box-shadow: inset -1px 0px 27px 5px rgb(0, 255, 21);
+  background-color: #000;
+}
+.bgd{
+  -webkit-box-shadow: inset -1px 0px 27px 5px rgba(255,255,255,1);
+  -moz-box-shadow: inset -1px 0px 27px 5px rgba(255,255,255,1);
+  box-shadow: inset -1px 0px 27px 5px rgba(255,255,255,1);
+  background-color: #000;
 }

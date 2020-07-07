@@ -1,5 +1,5 @@
 h5{
-  margin-top: 15px;
+  margin-top: 25px;
   font-family: fantasy;
 }
 .margen{
@@ -17,6 +17,7 @@ margin-left: 15px;
 img{
  width: 100%;
  height: 70px;
+ 
 }
 .card{
  background-color: rgba($color: black, $alpha: 1);
@@ -25,6 +26,11 @@ img{
 width: 120px;
 height: 90px;
 font-size: 12px;text-align: center;
+&:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  transform: all 0.5;
+   }
 }
 
 .contendedor{
@@ -38,33 +44,40 @@ section{
 $ima:"https://www.xmple.com/wallpaper/graph-paper-black-green-grid-2560x1440-c2-000000-00ff00-l2-4-120-a-0-f-20.svg";
 
 .contenido{
-width: 100%;
-height: auto;
-background-size: contain;
-.container{
- width: 80%;
- margin: auto;
- .map{
+  
+  width: 100%;
+  margin: auto;
+  margin-top: 10px; 
 
-   width: 70%;
-   margin: auto;
-   height: auto;
- }
-}
+  .container{
+    padding-top: 10px;
+    height: 539px;
+    width: 1000%;
+    margin: auto;
+    -webkit-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+    -moz-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+    box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+    background-image: url("https://www.xmple.com/wallpaper/graph-paper-black-green-grid-2560x1440-c2-000000-00ff00-l2-4-120-a-0-f-20.svg");
+   background-size: contain;
+    .map{
+      width: 50%;
+      margin: auto;
+    }
+  }
 }
 
 main{
-background-color: rgba($color: #000000, $alpha: 0);
+background-color: #000
 }
 
-@media (max-width: 767px){
+@media (max-width: 1000px){
 .contenido{
  width: 100%;
- 
- .container{
-   width: 95%;
+  .container{
+   width: 100%;
    margin: auto;
    .map{
+     margin-left: -100px;
      width: 100%;
      margin: auto;
    }
