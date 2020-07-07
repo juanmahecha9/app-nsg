@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'jquery-mapael';
-import 'jquery-mapael/js/maps/sur_america.js';
+/* import 'jquery-mapael/js/maps/sur_america.js'; */
+import '../../../assets/maps/sur_america.js'
 import { AttrAst } from '@angular/compiler';
 
 declare global {

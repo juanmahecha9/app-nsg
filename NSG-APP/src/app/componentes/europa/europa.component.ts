@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'jquery-mapael';
 import 'jquery-mapael/js/maps/world_countries.js';
+import '../../../assets/maps/europa.js'
 import { AttrAst } from '@angular/compiler';
 
 declare global {
@@ -22,7 +23,7 @@ export class EuropaComponent implements OnInit {
     /* Definicion del mapa con el uso de la libreria de mapel de jquery */
     $(".container").mapael({
       map: {
-        name: "world_countries"
+        name: "europa",
       },
       zoom: {
         maxLevel: 10

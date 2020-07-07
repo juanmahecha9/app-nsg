@@ -6,7 +6,7 @@
     width: 100%;
     display: flex;
   
-    #oceania{
+    #centroAmerica{
       width: 20%;
       max-height: 700px;
       overflow-y: scroll;
@@ -17,7 +17,7 @@
     }
   }
   
-  #oceania{
+  #centroAmerica{
     text-align: center;
     color: whitesmoke;
   
@@ -53,7 +53,7 @@
       width: 100%;
       display: flex;
   
-      #oceania{
+      #centroAmerica{
         width: 20%;
         min-height: 650px;
         overflow-y: scroll;
@@ -70,7 +70,7 @@
       width: 100%;
       display: flex;
   
-      #oceania{
+      #centroAmerica{
         width: 20%;
         max-height: 300px;
         overflow-y: scroll;
@@ -87,7 +87,7 @@
       width: 100%;
       display: flex;
   
-      #oceania{
+      #centroAmerica{
         width: 25%;
         max-height:200px;
         overflow-y: scroll;
@@ -127,7 +127,7 @@
         width: 100%;
       }
   
-      #oceania{
+      #centroAmerica{
           margin: auto;
           margin-bottom: 10px;
           text-align: center;
@@ -147,28 +147,64 @@
   }
    */
 
- .margen{
-   margin-left: 17px;
- }
-   .scrolling-wrapper{
-    overflow-x: auto;
+   .margen{
+    margin-left: 17px;
   }
-   
-  
-  img{
-    width: 100%;
-    height: 70px;
-  }
-  .card{
-    background-color: rgba($color: black, $alpha: 1);
-    color: whitesmoke;
-width: 120px;
-height: 90px;
-font-size: 12px;text-align: center;
-  }.contendedor{
-    width: 100%;
-    section{
-      width: 70%;
-      margin: auto;
+     .scrolling-wrapper{
+      overflow-x: auto;
     }
-  }
+    
+    
+    
+    img{
+      width: 100%;
+      height: 70px;
+    }
+    .card{
+      background-color: rgba($color: black, $alpha: 1);
+      color: whitesmoke;
+  width: 120px;
+  height: 90px;
+  font-size: 12px;text-align: center;
+    }
+  
+    .contendedor{
+      width: 100%;
+      section{
+        width: 70%;
+        margin: auto;
+      }
+    }
+  
+    .contenido{
+      width: 100%;
+      
+      .container{
+        width: 80%;
+        margin: auto;
+        .map{
+          width: 50%;
+          margin: auto;
+        }
+      }
+    }
+    
+    main{
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    
+    @media (max-width: 767px){
+      .contenido{
+        width: 100%;
+        
+        .container{
+          width: 95%;
+          margin: auto;
+          .map{
+            width: 100%;
+            margin: auto;
+          }
+        }
+      }
+    }
+    

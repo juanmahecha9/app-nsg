@@ -19,6 +19,7 @@ import { SurAmericaComponent } from './componentes/sur-america/sur-america.compo
 import { AuthService } from './services/auth.service';
 import { ListaDatosCovidComponent } from './componentes/lista-datos-covid/lista-datos-covid.component';
 
+import { Tablero1Component }  from './componentes/tablero1/tablero1.component'
 
 
 const routes: Routes = [
@@ -83,6 +84,10 @@ const routes: Routes = [
     path: 'datos/covid',
     component: ListaDatosCovidComponent,
   },
+  {
+    path: 'tablero',
+    component: Tablero1Component
+  }
 ];
 
 @NgModule({

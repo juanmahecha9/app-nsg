@@ -23,9 +23,10 @@ export class HeaderComponent implements OnInit {
     this.Producto = new producto();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { this.cargar();}
 
   cerrar() {
+  
     this.auth.cerrarS();
     alert('Cerrar sesion');
   }
@@ -35,7 +36,7 @@ export class HeaderComponent implements OnInit {
       if (res.statusCode !== 200) {
         alert("Error, recarge de nuevo");
       } else {
-        
+        alert(res);
       }
     });
   }

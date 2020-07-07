@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import 'jquery-mapael';
-import 'jquery-mapael/js/maps/world_countries.js';
+import '../../../assets/maps/centro-america.js';
 import { AttrAst } from '@angular/compiler';
 
 declare global {
@@ -22,10 +22,12 @@ export class CentroAmericaComponent implements OnInit {
      /* Definicion del mapa con el uso de la libreria de mapel de jquery */
      $(".container").mapael({
       map: {
-        name: "world_countries"
+        name: "centro_america",
+        width: 600,
       },
       zoom: {
-        maxLevel: 10
+        maxLevel: 10,
+       
       },
     });
     $("div").hover(

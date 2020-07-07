@@ -48,9 +48,9 @@ font-size: 15px;
 
  */
 
- // selector
+// selector
 
- .inicio {
+.inicio {
   width: 100%;
 
   .t {
@@ -58,116 +58,29 @@ font-size: 15px;
     margin: auto;
 
     #titulo {
+      margin-top: 15px;
       font-family: fantasy;
       text-align: center;
       color: whitesmoke;
+      margin-bottom: 15px;
     }
   }
 }
 
-.continentes{
+.contenido {
   width: 100%;
-  label{
+  .contenido1 {
     width: 50%;
     margin: auto;
-  }
-}
-
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-}
-
-label[for=favcity] {
-  position: relative;
-  display: block;
-  width: 300px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-label[for=favcity]::after {
-  content: ' ';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 100%;
-  display: block;
-  background: #178abf url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOBAMAAAGq7RFVAAAAJ1BMVEX///////////////////////////////////////////////////9Ruv0SAAAADHRSTlMACAoREoKDt7y9zc5qtZoyAAAAcklEQVQIHQXBsQnCUAAFwFOCCKbIABaWERzi1yaFAzmEpHYEC8GUKVQEkbyhvOOkZqdWt0/QYKqLzQeF7dv6y/RLwa2wYtk4Xxxe+t8yd1WuM/rcUc2gYHEeoP02umSgTR50ybBPRuiSZAS6ZAQ4jgCAPyjYJiRH4fymAAAAAElFTkSuQmCC') no-repeat center center;
-  pointer-events: none;
-}
-
-label[for=favcity] select {
-  border: 5px solid #000;
-  background: black;
-    color: #ffffff;
-  padding: 5px 5px 5px 5px;
-  width: 100%;
-  font-size: 14px;
-  font-family: monospace;
-  cursor: pointer;
-}
-
-label[for=favcity] select::-ms-expand {
-    display: none;
-}
-
-label[for=favcity] :-moz-any(select) {
-  width: 100%;
-
-}
-
-label[for=favcity].ie9 select {
-  width: 100%;
-}
-
-label[for=favcity] select:focus {
-  outline: 1px dotted #A9A9A9;
-}
-
-@media (max-width: 600px){
-  .continentes{
-    width: 100%;
-    label{
-      width: 50%;
-      margin: auto;
-      font-size: 15px;
-    }
-  }
- 
-  .inicio {
-    width: 100%;
-  
-    .t {
-      width: 50%;
-      margin: auto;
-  
-      #titulo {
-        font-size: 13px;
-        font-family: fantasy;
-        text-align: center;
-        color: whitesmoke;
+    .dropdown {
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: #000;
+          font-weight: 700;
+        }
       }
     }
   }
-
-  label[for=favcity] select {
-    border: 2px solid #000;
-    background: black;
-    color: #ffffff;
-    padding: 0;
-    width: 100%;
-    font-size: 12px;
-    font-family: fantasy;
-    cursor: pointer;
-  }
-
 }

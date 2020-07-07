@@ -25,17 +25,21 @@
 </div>
 <br />
 
-<div class="continentes">
-    <label for="favcity">
-        <select id="favcity" name="select">
-          <option value="0">Seleciona el continente</option>
-          <option routerLink="/norte-america" value="1">Norte America</option>
-          <option routerLink="/centro-america" value="1">Centro America</option>
-          <option routerLink="/sur-america" value="1">Sur America</option>
-          <option routerLink="/europa" value="1">Europa</option>
-          <option routerLink="/africa" value="1">Africa</option>
-          <option routerLink="/asia" value="1">Asia</option>
-          <option routerLink="/oceania" value="1">Oceania</option>
-        </select>
-      </label>
-</div>
+
+  <div class="contenido">
+    <div class="contenido1">
+      <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-toggle="dropdown">Selecciona el continente
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a routerLink = "/norte-america" routerLinkActive="active">Norte America</a></li>
+         <li><a routerLink = "/centro-america" routerLinkActive="active">Centro America</a></li>
+         <li><a routerLink = "/sur-america" routerLinkActive="active">Sur America</a></li>
+         <li><a routerLink = "/europa" routerLinkActive="active">Europa</a></li>
+         <li><a routerLink = "/asia" routerLinkActive="active">Asia</a></li>
+         <li><a routerLink = "/africa" routerLinkActive="active">Africa</a></li>
+         <li><a routerLink = "/oceania" routerLinkActive="active">Oceania</a></li>
+        </ul>
+      </div>    
+    </div>
+  </div>

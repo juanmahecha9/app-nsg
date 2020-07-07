@@ -32,7 +32,8 @@ export class DatosCovidService {
       )
       .pipe(
         (res) => res
-      ); /* convierte datos de entrea en datos de alida para que llegue a la api en forma de respuesta y nos trae la respuesta de nuestra api */
+        
+              ); /* convierte datos de entrea en datos de alida para que llegue a la api en forma de respuesta y nos trae la respuesta de nuestra api */
   }
 
   /* Mostrar los contenidos de la base de datos */
