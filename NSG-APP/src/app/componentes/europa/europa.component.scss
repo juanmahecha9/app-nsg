@@ -1,5 +1,5 @@
 h5{
-  margin-top: 15px;
+  margin-top: 15px;font-family: fantasy;
 }
 .margen{
 margin-left: 15px;
@@ -19,6 +19,7 @@ img{
 }
 .card{
  background-color: rgba($color: black, $alpha: 1);
+ border: white 2px solid;
  color: whitesmoke;
 width: 120px;
 height: 90px;

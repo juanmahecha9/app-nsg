@@ -35,7 +35,7 @@ export class SurAmericaComponent implements OnInit {
       var options1 = { areas: {} };
       options1.areas[id] = {
         attrs: {
-          fill: '#91b029',
+          fill: '#00ff15',
         },
       };
       $('.container').trigger('update', [{ mapOptions: options1 }]);

@@ -27,7 +27,7 @@ export class AfricaComponent implements OnInit {
     $(".container").mapael({
       map: {
         name: "africa",
-        width: 600
+        width: 700
       },
       zoom: {
         maxLevel: 10
@@ -39,7 +39,7 @@ export class AfricaComponent implements OnInit {
         var options1 = { areas: {} };
         options1.areas[id] = {
           attrs: {
-            fill: "#91b029",
+            fill: "#ff1500",
           }
         };
         $(".container").trigger("update", [
