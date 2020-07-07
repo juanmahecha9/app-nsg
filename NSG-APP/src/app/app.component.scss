@@ -16,6 +16,7 @@
   width: 150px;
   height: 100%;
   color: #e1ffff;
+  border-right: red 1px solid;
 }
 .nav-side-menu .brand {
   background-color: #000;
@@ -96,6 +97,8 @@
   padding-left: 0px;
   border-left: 3px solid #2e353d;
   border-bottom: 1px solid #23282e;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 .nav-side-menu li a {
   text-decoration: none;
@@ -174,3 +177,4 @@ body {
     }
   }
 }
+
