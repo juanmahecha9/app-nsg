@@ -23,7 +23,7 @@ export class SurAmericaComponent implements OnInit {
     $('.container').mapael({
       map: {
         name: 'sur_america',
-        width: 600,
+        width: 545,
         
       },
       zoom: {

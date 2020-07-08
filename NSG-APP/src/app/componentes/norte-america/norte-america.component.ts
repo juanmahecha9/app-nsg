@@ -27,7 +27,7 @@ export class NorteAmericaComponent implements OnInit {
     $(".container").mapael({
       map: {
         name: "norte_america",
-        width: 500
+        width: 450
       },
       zoom: {
         maxLevel: 10

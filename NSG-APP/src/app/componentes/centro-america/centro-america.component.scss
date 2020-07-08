@@ -1,5 +1,6 @@
 h5{
-  margin-top: 15px;font-family: fantasy;
+  margin-top: 25px;
+  font-family: fantasy;
 }
 .margen{
 margin-left: 15px;
@@ -8,7 +9,7 @@ margin-left: 15px;
 
 .scrolling-wrapper{
  overflow-x: auto;
-
+ overflow-y: hidden;
 }
 
 
@@ -16,16 +17,27 @@ margin-left: 15px;
 img{
  width: 100%;
  height: 70px;
+ 
 }
 .card{
  background-color: rgba($color: black, $alpha: 1);
  border: white 2px solid;
  color: whitesmoke;
 width: 120px;
-height: 90px;
+height: 100px;
 font-size: 12px;text-align: center;
+&:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  transform: all 0.5;
+   }
 }
-
+.card-text{
+  font-family: fantasy;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
 .contendedor{
 width: 100%;
 section{
@@ -34,38 +46,47 @@ section{
 }
 } 
 
+$ima:"https://www.xmple.com/wallpaper/graph-paper-black-green-grid-2560x1440-c2-000000-00ff00-l2-4-120-a-0-f-20.svg";
+
 .contenido{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  
   width: 80%;
   margin: auto;
-  margin-top: 50px; 
-  -webkit-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
-  -moz-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
-  box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
-  background-image: url("https://www.xmple.com/wallpaper/graph-paper-black-green-grid-2560x1440-c2-000000-00ff00-l2-4-120-a-0-f-20.svg");
- background-size: contain;
+  margin-top: 10px;
+
+  
   .container{
+    padding-top: 10px;
+    
     width: 70%;
     margin: auto;
+    -webkit-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+    -moz-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+    box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+    background-image: url("https://www.xmple.com/wallpaper/graph-paper-black-green-grid-2560x1440-c2-000000-00ff00-l2-4-120-a-0-f-20.svg");
+   background-size: contain;
     .map{
-      width: 100%;
+      width: 90%;
       margin: auto;
     }
   }
 }
 
-@media (max-width: 767px){
-  .contenido{
-    width: 100%;
-    
-    .container{
-      width: 95%;
-      margin: auto;
-      .map{
-        width: 100%;
-        margin: auto;
-      }
-    }
-  }
+main{
+background-color: #000
+}
+
+@media (max-width: 1000px){
+.contenido{
+ width: 100%;
+  .container{
+   width: 100%;
+   margin: auto;
+   .map{
+     margin-left: -100px;
+     width: 100%;
+     margin: auto;
+   }
+ }
+}
 }
