@@ -28,7 +28,7 @@ export class AfricaComponent implements OnInit {
         zoom: {
           enabled: true,
           touch: true,
-          mousewheel: true
+          mousewheel: true,
         },
       },
     });

@@ -20,7 +20,13 @@ import { AuthService } from './services/auth.service';
 import { ListaDatosCovidComponent } from './componentes/lista-datos-covid/lista-datos-covid.component';
 
 import { Tablero1Component }  from './componentes/tablero1/tablero1.component'
-
+import { Tablero2Component } from './componentes/tablero2/tablero2.component'
+import { Tablero3Component } from './componentes/tablero3/tablero3.component'
+import { Tablero4Component } from './componentes/tablero4/tablero4.component'
+import { Tablero5Component } from './componentes/tablero5/tablero5.component'
+import { Tablero6Component } from './componentes/tablero6/tablero6.component'
+import { Tablero7Component } from './componentes/tablero7/tablero7.component'
+import { InstruccionesComponent } from './componentes/instrucciones/instrucciones.component'
 
 const routes: Routes = [
   {
@@ -85,8 +91,50 @@ const routes: Routes = [
     component: ListaDatosCovidComponent,
   },
   {
-    path: 'tablero',
-    component: Tablero1Component
+    path: 'tablero-usa',
+    component: Tablero1Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'tablero-belice',
+    component: Tablero2Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'tablero-colombia',
+    component: Tablero3Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'tablero-alemania',
+    component: Tablero4Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'tablero-egipto',
+    component: Tablero5Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'tablero-arabia-saudita',
+    component: Tablero6Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'tablero-australia',
+    component: Tablero7Component,
+    canActivate: [AuthGuard],
+
+  },
+  {
+    path: 'instrucciones',
+    component: InstruccionesComponent
   }
 ];
 

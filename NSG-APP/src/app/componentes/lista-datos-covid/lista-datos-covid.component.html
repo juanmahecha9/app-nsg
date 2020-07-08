@@ -1,5 +1,5 @@
 <main>
-  <app-audio-datos-covid></app-audio-datos-covid>
+  <!--  <app-audio-datos-covid></app-audio-datos-covid> -->
 
   <br />
   <h1>LISTADO DE PAISES</h1>
@@ -32,13 +32,12 @@
     <div class="row">
       <div class="conte" *ngFor="let producto of productosEncontrados">
         <div
-          class="card text-white "
+          class="card text-white"
           [ngClass]="{
-            'bgr': producto.indicativo <= '50',
-            'bgw':
-              producto.indicativo > '50' && producto.indicativo <= '150',
-            'bgv': producto.indicativo > '150',
-            'bgd': producto.casos <= '50'
+            bgr: producto.indicativo <= '50',
+            bgw: producto.indicativo > '50' && producto.indicativo <= '150',
+            bgv: producto.indicativo > '150',
+            bgd: producto.casos <= '50'
           }"
           style="max-width: 18rem;"
         >

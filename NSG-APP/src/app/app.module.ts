@@ -35,6 +35,13 @@ import { AnimacionMComponent } from './componentes/animacion-m/animacion-m.compo
 import { BatallaComponent } from './componentes/batalla/batalla.component';
 import { AfricaComponent } from './componentes/africa/africa.component';
 import { Tablero1Component } from './componentes/tablero1/tablero1.component';
+import { Tablero2Component } from './componentes/tablero2/tablero2.component';
+import { Tablero3Component } from './componentes/tablero3/tablero3.component';
+import { Tablero4Component } from './componentes/tablero4/tablero4.component';
+import { Tablero5Component } from './componentes/tablero5/tablero5.component';
+import { Tablero6Component } from './componentes/tablero6/tablero6.component';
+import { InstruccionesComponent } from './componentes/instrucciones/instrucciones.component';
+import { Tablero7Component } from './componentes/tablero7/tablero7.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,13 @@ import { Tablero1Component } from './componentes/tablero1/tablero1.component';
     BatallaComponent,
     AfricaComponent,
     Tablero1Component,
+    Tablero2Component,
+    Tablero3Component,
+    Tablero4Component,
+    Tablero5Component,
+    Tablero6Component,
+    InstruccionesComponent,
+    Tablero7Component,
     
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],

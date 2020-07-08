@@ -1,182 +1,240 @@
-let pastGuesses =[];
-let numberOfHits = 0;
-let numberOfMisses = 0;
-let loggedMessageTimes =[];
+function alerta(){
+    let pastGuesses = [];
+    let numberOfHits = 0;
+    let numberOfMisses = 0;
+    let loggedMessageTimes = [];
 
-class GameBoard {
-    constructor(cellNumber) {
+    class GameBoard {
+      constructor(cellNumber) {
         this.cellNumber = [];
 
-        this.checkAvailableSpace = function(isVertical, startNumber, shipLength) {
-            const freeSpaces =[];
-            let startCell = startNumber;
-            let endCell = 0;
-            let increase = 1;
+        this.checkAvailableSpace = function (
+          isVertical,
+          startNumber,
+          shipLength
+        ) {
+          const freeSpaces = [];
+          let startCell = startNumber;
+          let endCell = 0;
+          let increase = 1;
 
-            isVertical ? (endCell = (startNumber + 91), increase = 10) 
-                        : (startCell = (startNumber * 10), endCell = (startCell + 10));
+          isVertical
+            ? ((endCell = startNumber + 91), (increase = 10))
+            : ((startCell = startNumber * 10), (endCell = startCell + 10));
 
-            for ( let i = startCell ; i < endCell ; i+= increase) {
-                if (typeof this[i] === 'undefined') {
-                    freeSpaces.push(i);
-            
-                } else {
-                    freeSpaces.push("X");
-                }    
+          for (let i = startCell; i < endCell; i += increase) {
+            if (typeof this[i] === "undefined") {
+              freeSpaces.push(i);
+            } else {
+              freeSpaces.push("");
             }
-            return findPossiblePoints(freeSpaces, shipLength);            
-        }
+          }
+          return findPossiblePoints(freeSpaces, shipLength);
+        };
 
         this.placeShip = function (ship) {
-            
-            const isVertical = randomNumber(1);
-            const increase = (isVertical * 9) + 1;
-            const endCell = (ship.health) * increase; 
-            let keepGoing = true;
+          const isVertical = randomNumber(1);
+          const increase = isVertical * 9 + 1;
+          const endCell = ship.health * increase;
+          let keepGoing = true;
 
-            while(keepGoing) {
-                let startIndex = randomNumber(9); 
-                var possibilities = this.checkAvailableSpace(isVertical, startIndex, ship.health); 
-                possibilities.length == 0 ? keepGoing = true : keepGoing = false;
-            }
-            const shipStart = chooseRandomFromArray(possibilities);
-            console.log(possibilities);
-            console.log("placing " + ship.name + " at " + shipStart);
+          while (keepGoing) {
+            let startIndex = randomNumber(9);
+            var possibilities = this.checkAvailableSpace(
+              isVertical,
+              startIndex,
+              ship.health
+            );
+            possibilities.length == 0
+              ? (keepGoing = true)
+              : (keepGoing = false);
+          }
+          const shipStart = chooseRandomFromArray(possibilities);
+          console.log(possibilities);
+          console.log("placing " + ship.name + " at " + shipStart);
 
-            for ( let i = 0; i < endCell; i += increase) {
-                gameBoard[(shipStart + i)] = ship;                    
-            } 
-        }
+          for (let i = 0; i < endCell; i += increase) {
+            gameBoard[shipStart + i] = ship;
+          }
+        };
 
-        this.checkIfShotHitsAnything = newGuess => {
-           
-            this[parseInt(newGuess)] ? (hit(newGuess), this[newGuess].resultOfGettingHit())  : miss(newGuess) ;     // calls ship.resultOfGettingHit() or tells "missed"
-        }             
-    } // constructor
-} // class GameBoard
+        this.checkIfShotHitsAnything = (newGuess) => {
+          this[parseInt(newGuess)]
+            ? (hit(newGuess), this[newGuess].resultOfGettingHit())
+            : miss(newGuess); // calls ship.resultOfGettingHit() or tells "missed"
+        };
+      } // constructor
+    } // class GameBoard
 
-class Ship {
-    constructor(name, shipLength) {
-        Ship.numberOfShips++ ;
+    class Ship {
+      constructor(name, shipLength) {
+        Ship.numberOfShips++;
         this.name = name;
         this.health = shipLength;
-        
+
         this.resultOfGettingHit = function () {
-            
-            this.health-- ;
-            
-            this.health > 0 ? tellPlayer("Just a fleshwound..") 
-                            : (tellPlayer("You sank my " + this.name), Ship.numberOfShips-- , (Ship.numberOfShips > 0 ? tellPlayer("Grrr.. I really liked my  " + this.name + "!", 4000) : won() )); //: tellPlayer("You won!")) ;
+          this.health--;
+
+          this.health > 0
+            ? tellPlayer("Coronavirus resistente")
+            : (tellPlayer("Encontraste el " + this.name),
+              Ship.numberOfShips--,
+              Ship.numberOfShips > 0
+                ? tellPlayer(
+                    "Estas cerca de encontrar la vacuna  " + this.name + "!",
+                    4000
+                  )
+                : won()); //: tellPlayer("You won!")) ;
+        };
+      }
+    }
+
+    function findPossiblePoints(rowOrColumn, shipLength) {
+      let counter = 0;
+      const maxLengthAtEachPoint = inReverseOrder(
+        inReverseOrder(rowOrColumn).map((value) =>
+          value === "" ? (counter = 0) : (counter += 1)
+        )
+      );
+
+      const collectAllPossiblePlaces = maxLengthAtEachPoint.reduce(function (
+        total,
+        value,
+        index
+      ) {
+        if (value >= shipLength) {
+          total.push(rowOrColumn[index]);
         }
-    }
-}
-
-function findPossiblePoints(rowOrColumn, shipLength) {
-    let counter = 0;
-    const maxLengthAtEachPoint = inReverseOrder(inReverseOrder(rowOrColumn).map((value) => value === "" ? counter=0 : counter += 1  ));
-       
-    const collectAllPossiblePlaces = maxLengthAtEachPoint.reduce(function(total, value, index) {
-        
-        if (value >= shipLength) {  
-            total.push(rowOrColumn[index]); 
-        }  
         return total;
-        
-    }, []);
+      },
+      []);
 
-    return collectAllPossiblePlaces;
-}
-
-function fire() {
-  const typedInGuess =  document.getElementById("user-input").value.toLowerCase();
-  const guessInCorrectFormat = typedInGuess.match(/[a-j]{1}-?[0-9]{1}$/i);
-  document.getElementById("user-input").value="";
-
-  if (guessInCorrectFormat === null) {
-  
-    tellPlayer("Please enter a valid cell number A0-J9");
-
-  } else {
-      
-    let firstLetterToNumber = (guessInCorrectFormat[0].charCodeAt(0) - 97);
-    let guessParsedToCellId = parseInt(firstLetterToNumber + guessInCorrectFormat[0].slice(-1));
-    
-
-
-    if (pastGuesses.includes(guessParsedToCellId)) {
-
-        tellPlayer("You've already bombed that grid, guess again.");
-
-    } else {
-
-        pastGuesses.push(guessParsedToCellId);
-        gameBoard.checkIfShotHitsAnything(guessParsedToCellId);
+      return collectAllPossiblePlaces;
     }
-  }
-}
 
-function hit(location) {
-    document.getElementById(location).className="hit";
-    numberOfHits++ ;
-    (numberOfHits % 3 === 0) ? tellPlayer("And another hit! Wow you're good.") : ((numberOfHits % 2 === 0) ? tellPlayer("Another hit!") : tellPlayer("Hit"));
-}
+    function fire() {
+      const typedInGuess = document
+        .getElementById("user-input")
+        .value.toLowerCase();
+      const guessInCorrectFormat = typedInGuess.match(/[a-j]{1}-?[0-9]{1}$/i);
+      document.getElementById("user-input").value = "";
 
-function miss(location) {
-    document.getElementById(location).className="miss";
-    numberOfMisses++ ;
-    (numberOfMisses % 3 === 0) ? tellPlayer("You missed again. Don't give up.") : ((numberOfMisses % 2 === 0) ? tellPlayer("Sorry, another miss.") : tellPlayer("Miss."));
+      if (guessInCorrectFormat === null) {
+        tellPlayer("Ingresa una coordenada validad, A0-J9");
+      } else {
+        let firstLetterToNumber = guessInCorrectFormat[0].charCodeAt(0) - 97;
+        let guessParsedToCellId = parseInt(
+          firstLetterToNumber + guessInCorrectFormat[0].slice(-1)
+        );
 
-}
+        if (pastGuesses.includes(guessParsedToCellId)) {
+          tellPlayer("Ya has atacado esa cuadrícula, adivina de nuevo.");
+        } else {
+          pastGuesses.push(guessParsedToCellId);
+          gameBoard.checkIfShotHitsAnything(guessParsedToCellId);
+        }
+      }
+    }
 
-function won() {
-    document.getElementById("fire-button").removeEventListener("click", fire);
-    document.getElementById("user-input").onkeypress = event => event.keyCode === 13 ? false : false ;
-    document.getElementById("fire-button").id = "fire-button-disarmed";
+    function hit(location) {
+      document.getElementById(location).className = "hit";
+      numberOfHits++;
+      numberOfHits % 3 === 0
+        ? tellPlayer("Has encontrado otra vacuna")
+        : numberOfHits % 2 === 0
+        ? tellPlayer("Vacuna")
+        : tellPlayer("Estas cerca de la vacuna");
+    }
 
+    function miss(location) {
+      document.getElementById(location).className = "miss";
+      numberOfMisses++;
+      numberOfMisses % 3 === 0
+        ? tellPlayer("Sigues infectado, Busca la vacuna")
+        : numberOfMisses % 2 === 0
+        ? tellPlayer("¡¡ALERTA!! Virus esparcido")
+        : tellPlayer("Fallaste");
+    }
 
-    tellPlayer("You won!!! In " + pastGuesses.length + " attempts.", 4000);
-    tellPlayer("Making your accuracy: " + Math.round((numberOfHits / pastGuesses.length) * 100) + " percent.", 7000);
-    tellPlayer("Game Over...    Nice Job!", 12000);
-    tellPlayer("Now turn off your computer and go get a life.", 20000);
-}
-function tellPlayer(messageToPlayer, delay) {
-    let now = new Date();
-    let timeSinceLastMessage = (now - loggedMessageTimes[(loggedMessageTimes.length - 1)]);
-    let timeOut = delay || 500- timeSinceLastMessage; // manual || default : if <= 0 doesn't delay
-    loggedMessageTimes.push(now);
+    function won() {
+      document
+        .getElementById("fire-button")
+        .removeEventListener("click", fire);
+      document.getElementById("user-input").onkeypress = (event) =>
+        event.keyCode === 13 ? false : false;
+      document.getElementById("fire-button").id = "fire-button-disarmed";
 
-    setTimeout(function() { document.getElementById("message").innerHTML = (messageToPlayer)}, timeOut);
+      tellPlayer("Sobreviviste en " + pastGuesses.length + " intentos.", 4000);
+      tellPlayer(
+        "Making your accuracy: " +
+          Math.round((numberOfHits / pastGuesses.length) * 100) +
+          " percent.",
+        7000
+      );
+      tellPlayer("Game Over...", 12000);
+      tellPlayer("Ahora apaga tu computadora y ve a buscar una vida.", 20000);
+    }
+    function tellPlayer(messageToPlayer, delay) {
+      let now = new Date();
+      let timeSinceLastMessage =
+        now - loggedMessageTimes[loggedMessageTimes.length - 1];
+      let timeOut = delay || 2000 - timeSinceLastMessage; // manual || default : if <= 0 doesn't delay
+      loggedMessageTimes.push(now);
 
-}
+      setTimeout(function () {
+        document.getElementById("message").innerHTML = messageToPlayer;
+      }, timeOut);
+    }
 
-const inReverseOrder = (array) => array.slice().reverse();
+    const inReverseOrder = (array) => array.slice().reverse();
 
-const randomNumber = upperLimit => Math.floor(Math.random() * (upperLimit + 1 ));
+    const randomNumber = (upperLimit) =>
+      Math.floor(Math.random() * (upperLimit + 1));
 
-const chooseRandomFromArray = array => array[randomNumber((array.length - 1))];
+    const chooseRandomFromArray = (array) =>
+      array[randomNumber(array.length - 1)];
 
-const gameBoard = new GameBoard(100);
+    const gameBoard = new GameBoard(100);
 
-Ship.numberOfShips = 0;
-let carrier = new Ship("carrier", 2);
-let battleship = new Ship("battleship", 2);
-let cruiser = new Ship("cruiser", 3);
-let submarine = new Ship("submarine", 3);
-let destroyer = new Ship("destroyer", 2);
+    Ship.numberOfShips = 0;
+    let carrier = new Ship("carrier", 5);
+    let battleship = new Ship("battleship", 4);
+    let cruiser = new Ship("cruiser", 3);
+    let submarine = new Ship("submarine", 3);
+    let destroyer = new Ship("destroyer", 2);
 
-let shipList = [carrier, battleship, cruiser, submarine, destroyer];
+    let shipList = [carrier, battleship, cruiser, submarine, destroyer];
 
-for (ship of shipList) {
-gameBoard.placeShip(ship); }
+    for (ship of shipList) {
+      gameBoard.placeShip(ship);
+    }
 
+    document.getElementById("fire-button").addEventListener("click", fire);
+    document.getElementById("user-input").onkeypress = fireOnEnterKey;
 
-document.getElementById("fire-button").addEventListener("click", fire);
-document.getElementById("user-input").onkeypress = fireOnEnterKey;
-
-function fireOnEnterKey(event) { 
-    
-    if (event.keyCode === 13) {
+    function fireOnEnterKey(event) {
+      if (event.keyCode === 13) {
         fire();
         return false;
+      }
     }
-} 
+}
+
+function alerta1(){
+
+}
+
+
+function alerta2(){
+
+}
+
+
+function alerta3(){
+
+}
+
+
+function alerta4(){
+
+}

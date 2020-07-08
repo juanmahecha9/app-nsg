@@ -1,264 +1,223 @@
-<app-audio-mapa></app-audio-mapa>
-<app-botones-mapa></app-botones-mapa>
-<!-- <br>
-<h1>OCEANIA</h1>
-<div id="contenido">
-    <div id="oceania" class="oceania">
-        <ol class='lista-paises'>
-            <div class="paises6">
-                <div class="col1">
-                    <li id="AU"><a href="">Australia</a></li>
-                    <li id="FJ"><a href="">Fiyi</a></li>
-                    <li id="MH"><a href="">Islas Marshall</a></li>
-                    <li id="SB"><a href="">Islas Salomón</a></li>
-                    <li id="KI"><a href="">Kiribati</a></li>
-                    <li id="FM"><a href="">Micronesia</a></li>
-                    <li id="NR"><a href="">Nauru</a></li>
-                </div>
-                <div class="col2">
-                    <li id="NZ"><a href="">Nueva Zelanda</a></li>
-                    <li id="PLW"><a href="">Palaos</a></li>
-                    <li id="PG"><a href="">Papúa Nueva Guinea</a></li>
-                    <li id="WS"><a href="">Samoa</a></li>
-                    <li id="TO"><a href="">Tonga</a></li>
-                    <li id="TV"><a href="">Tuvalu</a></li>
-                    <li id="VU"><a href="">Vanuatu</a></li>
-                </div>
-            </div>
-        </ol>
-    </div>
-    <div class="container">
-        <div class="map">Alternative content</div>
-    </div>
-</div> -->
+<main>
+  <!-- <app-audio-mapa></app-audio-mapa> -->
+  <app-botones-mapa></app-botones-mapa>
 
-<div class="contendedor">
-  <section>
-    <div class="container-fluid">
-      <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
-        <div class="margen">
-          <div id="AU" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/australia.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Australia</p>
+  <div class="contendedor">
+    <section>
+      <div class="container-fluid">
+        <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4">
+          <div class="margen">
+            <div id="AU" class="card" routerLink="/tablero-australia">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/australia.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Australia</p>
+              </div>
             </div>
           </div>
-        </div>
-  
-        <div class="margen">
-          <div id="FJ" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/fiji.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Fiyi</p>
-            </div>
-          </div>
-        </div>
-  
-        
-        <div class="margen">
-          <div id="MH" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/islas marshall.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Islas Marshall</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="SB" class="card">
-            <img
-              class="card-img-top"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/1200px-Flag_of_the_Solomon_Islands.svg.png"
-            />
-            <div class="card-block">
-              <p class="card-text">Islas Salomon</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="KI" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/kiribati.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Kiribati</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="FM" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/micronesia.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Micronesia</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="NR" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/nauru.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Nauru</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="NZ" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/nueva zelanda.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Nueva Zelanda</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="PW" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/palao.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Palaos</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="PG" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/papua nueva guinea.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Papua Nueva Guinea</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="PF" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/polinesia francesa.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Polinesia Francesa</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/samoa americana.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Samoa Americana</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="WS" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/samoa.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Samoa</p>
-            </div>
-          </div>
-        </div>
-  
-        <div class="margen">
-          <div id="TK" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/TOKELAU.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Tokelau</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="TO" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/TONGA.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Tonga</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="margen">
-          <div id="TV" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/tuvalu.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Tuvalu</p>
-            </div>
-          </div>
-        </div>
-  
-        <div class="margen">
-          <div id="VU" class="card">
-            <img
-              class="card-img-top"
-              src="../../../assets/paisesBandera/oceania/vanuatu.jpg"
-            />
-            <div class="card-block">
-              <p class="card-text">Vanuatu</p>
-            </div>
-          </div>
-        </div>
-      </div>     
-   </div>
-  </section>
-</div>
 
+          <div class="margen">
+            <div id="FJ" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/fiji.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Fiyi</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="margen">
+            <div id="MH" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/islas marshall.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Islas Marshall</p>
+              </div>
+            </div>
+          </div>
 
+          <div class="margen">
+            <div id="SB" class="card">
+              <img
+                class="card-img-top"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/1200px-Flag_of_the_Solomon_Islands.svg.png"
+              />
+              <div class="card-block">
+                <p class="card-text">Islas Salomon</p>
+              </div>
+            </div>
+          </div>
 
-<br />
-<div class="contenido">
-  <div class="container">
-    <div class="map">Alternative content</div>
+          <div class="margen">
+            <div id="KI" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/kiribati.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Kiribati</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="FM" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/micronesia.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Micronesia</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="NR" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/nauru.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Nauru</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="NZ" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/nueva zelanda.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Nueva Zelanda</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="PW" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/palao.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Palaos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="PG" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/papua nueva guinea.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Papua Nueva Guinea</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="PF" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/polinesia francesa.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Polinesia Francesa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/samoa americana.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Samoa Americana</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="WS" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/samoa.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Samoa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="TK" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/TOKELAU.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Tokelau</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="TO" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/TONGA.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Tonga</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="TV" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/tuvalu.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Tuvalu</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="margen">
+            <div id="VU" class="card">
+              <img
+                class="card-img-top"
+                src="../../../assets/paisesBandera/oceania/vanuatu.jpg"
+              />
+              <div class="card-block">
+                <p class="card-text">Vanuatu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</div>
 
-
-
-
-
-
-
-  
+  <br />
+  <div class="contenido">
+    <div class="container">
+      <div class="map">Alternative content</div>
+    </div>
+  </div>
+</main>
