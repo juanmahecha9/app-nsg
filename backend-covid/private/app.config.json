@@ -1,0 +1,6 @@
+{
+    "mongoDB": {
+        "local": "'mongodb://localhost:27017/Datos'",
+        "web": "nsg:nsg123"
+      }
+}

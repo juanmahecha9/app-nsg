@@ -35,33 +35,37 @@ section{
 } 
 
 .contenido{
-width: 100%;
-
-.container{
- width: 80%;
- margin: auto;
- .map{
-   width: 50%;
-   margin: auto;
- }
-}
-}
-
-main{
-background-color: rgba($color: #000000, $alpha: 0);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px; 
+  -webkit-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+  -moz-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+  box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+  background-image: url("https://www.xmple.com/wallpaper/graph-paper-black-green-grid-2560x1440-c2-000000-00ff00-l2-4-120-a-0-f-20.svg");
+ background-size: contain;
+  .container{
+    width: 100%;
+    margin: auto;
+    .map{
+      width: 100%;
+      margin: auto;
+    }
+  }
 }
 
 @media (max-width: 767px){
-.contenido{
- width: 100%;
- 
- .container{
-   width: 95%;
-   margin: auto;
-   .map{
-     width: 100%;
-     margin: auto;
-   }
- }
-}
+  .contenido{
+    width: 100%;
+    
+    .container{
+      width: 95%;
+      margin: auto;
+      .map{
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
 }

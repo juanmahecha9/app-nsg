@@ -36,7 +36,7 @@ export class CentroAmericaComponent implements OnInit {
         var options1 = { areas: {} };
         options1.areas[id] = {
           attrs: {
-            fill: "#00ff15",
+            fill: "#ff1500",
           }
         };
         $(".container").trigger("update", [

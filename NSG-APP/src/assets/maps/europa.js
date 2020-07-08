@@ -26,8 +26,8 @@
         {
             maps :  {
                 europa : {
-                    width : 1500,
-                    height : 800,
+                    width : 1000,
+                    height : 684,
                     getCoords : function (lat, lon) {
                         // todo
                         return {"x" : lon, "y" : lat};

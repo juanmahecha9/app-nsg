@@ -24,7 +24,7 @@ export class AfricaComponent implements OnInit {
     $('.container').mapael({
       map: {
         name: 'africa',
-        
+        width: 500,
         zoom: {
           enabled: true,
           touch: true,
