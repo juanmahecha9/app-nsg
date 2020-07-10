@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare const china: any;
 @Component({
   selector: 'app-tablero6',
   templateUrl: './tablero6.component.html',
@@ -11,5 +11,7 @@ export class Tablero6Component implements OnInit {
 
   ngOnInit(): void {
   }
-
+  my() {
+    china();
+  }
 }

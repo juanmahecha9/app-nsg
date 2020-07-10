@@ -10,8 +10,8 @@ import { from } from 'rxjs';
 export class DatosCovidService {
   /* Ruta de la api creada para los datos del covid */
  //url = 'https://datacovidnsg.herokuapp.com';
-//url = 'http://localhost:3100'
-url = "http://localhost:5000/prueba-datos-backend/us-central1/app"  
+url = 'http://localhost:3100'
+  
 /* Crear una variable de tipo privada para la informacion adquirida */
   constructor(private http: HttpClient) {}
 
@@ -42,4 +42,6 @@ url = "http://localhost:5000/prueba-datos-backend/us-central1/app"
     /* retornar con el motodo get */
     return this.http.get(this.url + '/data').pipe((res) => res);
   }
+
+ 
 }

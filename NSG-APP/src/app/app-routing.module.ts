@@ -91,13 +91,13 @@ const routes: Routes = [
     component: ListaDatosCovidComponent,
   },
   {
-    path: 'tablero-usa',
+    path: 'tablero-belice',
     component: Tablero1Component,
     canActivate: [AuthGuard],
 
   },
   {
-    path: 'tablero-belice',
+    path: 'tablero-usa',
     component: Tablero2Component,
     canActivate: [AuthGuard],
 
@@ -121,7 +121,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'tablero-arabia-saudita',
+    path: 'tablero-china',
     component: Tablero6Component,
     canActivate: [AuthGuard],
 

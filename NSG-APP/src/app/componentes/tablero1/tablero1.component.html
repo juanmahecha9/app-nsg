@@ -1,43 +1,46 @@
 <main>
-  <div style="width: 100%;" class="contanier pd-5 mt-4">
-    <button style="margin-left: 50px;" type="button" class="btn btn-outline-success" routerLink="/norte-america">REGRESAR AL MAPA</button>
+  <div class="container pd-5 mt-4">
+    <button style="margin-left: 50px;" type="button" class="btn btn-outline-success" routerLink="/centro-america" style="font-family: verdana;">REGRESAR AL MAPA</button>
   </div>
-    <h3 style="color: red; text-align: center;font-family: fantasy;">U.S.A LEVEL</h3>
+    <h3 style="color: red; text-align: center;font-family: fantasy;">Belice level</h3>
 <br>
 <div class="cnto">
   <div class="uno">
       <div class="contenido">
-          <div id="message-area">
+          <div id="message-area" style="font-family: fantasy;">
             Estado: <br /><br>
-            <span style="color: red;" id="message"></span>
-            
-              <table class="table" style="border-top: red 2px solid;">
+            <span style="color: red;" id="message"></span>                  
+          </div>
+        </div>
+        <table class="table" style="border-top: red 2px solid;">
+          <tr>
+            <td style="color: whitesmoke;margin-top: 5px ;font-family: fantasy;">Barcos con la cura</td>
+          </tr>                    
                 <tr>
-                  <td style="color: whitesmoke;margin-top: 5px ;font-family: fantasy;">Barcos con la cura</td>
+                    <td>JD Navy 6</td>
+                    
                 </tr>
                 <tr>
-                  <td>Fragata Will  5</td>
+                  <td>Fragata Will 5</td>
+                  
               </tr>
               <tr>
                 <td>C.B Victoria 4</td>
-
+                
               </tr>
               <tr>
                 <td>PW Romanian 3</td>
-              
+               
               </tr>
               <tr>
                 <td>SS Corvetta 3</td>
                 
               </tr>
               <tr>
-                <td>Destroyer 2</td>
-               
+                <td>Destroyer 2 </td>
+                
               </tr>
              </table>
-            
-          </div>
-        </div>
   </div>
   <div class="dos">
       <div id="game-board-container">
@@ -198,33 +201,39 @@
                   type="text"
                   id="user-input"
                   placeholder="COORDENADA"
+                  autofocus
                 />
-                <input type="button" id="fire-button" value="Fuego!" />
+                <input type="button" id="fire-button" value="Fuego!" (click)="my()" />
               </form>
-              <table class="table1" style="margin-top: 25px;">
+              <table style="margin-top: 25px; text-align: center;" class="table1" >
                 <tr>
-                  <td>Barcos con la cura</td>
-                </tr>
-                <tr>
-                  <td>Fragata Will  5</td>
-              </tr>
-              <tr>
-                <td>C.B Victoria 4</td>
-
-              </tr>
-              <tr>
-                <td>PW Romanian 3</td>
-              
-              </tr>
-              <tr>
-                <td>SS Corvetta 3</td>
-                
-              </tr>
-              <tr>
-                <td>Destroyer 2</td>
-               
-              </tr>
-             </table>
+                  <td style="color: whitesmoke;margin-top: 5px ;font-family: fantasy;">Barcos con la cura</td>
+                </tr>                    
+                      <tr>
+                          <td class="tablev">JD Navy 6</td>
+                          
+                      </tr>
+                      <tr>
+                        <td class="tablev">Fragata Will 5</td>
+                        
+                    </tr>
+                    <tr>
+                      <td class="tablev">C.B Victoria 4</td>
+                      
+                    </tr>
+                    <tr>
+                      <td class="tablev">PW Romanian 3</td>
+                     
+                    </tr>
+                    <tr>
+                      <td class="tablev">SS Corvetta 3</td>
+                      
+                    </tr>
+                    <tr>
+                      <td class="tablev">Destroyer 2 </td>
+                      
+                    </tr>
+                   </table>
             </div>
           </div>
         </div>

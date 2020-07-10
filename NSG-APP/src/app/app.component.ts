@@ -47,7 +47,23 @@ export class AppComponent implements OnInit {
       }
     });
   }
-
+/* Crear el metodo */
+  mostrarProducto() {
+    /* Nos suscribimos al servicio que creamos y se le indica que nos devuelva una respuesta cualquiera según el caso */
+    this.service.showData().subscribe((response: any) => {
+      this.productosEncontrados = response.producto;
+      alert('Recargando los datos')
+      /* el contador for nos muestra como respuesta cada producto */
+    },
+      (error) => {
+        var errormensaje = <any>error;
+        /* el error se guarda en una variable para luego comparla y mostrarla */
+        if (errormensaje != null) {
+          console.log(error);
+          /* si el error es diferente a null, que muestre el error en la consola del navegador */
+        }
+      }
+    )}
 
 }
 

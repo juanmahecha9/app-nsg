@@ -1,0 +1,245 @@
+.table {
+    margin-top: 22px;
+    color: green;
+    font-family: fantasy;
+    text-align: center;
+  }
+  
+  :-moz-any-link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4em;
+    color: white;
+    background-color: #000;
+  }
+  
+  .cnto {
+    margin-top: 25px;
+    width: 100;
+    display: flex;
+    .uno {
+      width: 30%;
+      border: white 1px solid;
+      margin-left: 25px;
+    }
+    .dos {
+      float: left;
+      width: 80%;
+      height: 250px;
+    }
+  }
+  
+  .contenido {
+    width: 100%;
+    #message-area {
+      text-align: center;
+      width: 100%;
+      margin: auto;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      color: white;
+      font-size: 20px;
+    }
+  }
+  $ima: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/79484a71-9188-4973-b391-05510394986e/dbsfgid-6af8edba-90a5-45b0-aac4-7df242cf735e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNzk0ODRhNzEtOTE4OC00OTczLWIzOTEtMDU1MTAzOTQ5ODZlXC9kYnNmZ2lkLTZhZjhlZGJhLTkwYTUtNDViMC1hYWM0LTdkZjI0MmNmNzM1ZS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Qwiuv4y0K7zTZRLHoQXME67lZ2IfbCSQt0o-oGsppmY";
+  
+  #game-board-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .game-board-wrapper {
+      position: relative;
+      .game-board {
+        width: 100%;
+        -webkit-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+        -moz-box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+        box-shadow: 1px 0px 25px 10px rgb(0, 255, 21);
+        // background-image: url("https://24.media.tumblr.com/6fa02fd4696bb828175ff78c9e3c4b76/tumblr_mu03z5bpTb1rk1qp5o1_500.gif");
+        /* background-image: url($ima);
+        opacity: 0.5; */
+        background: rgba(0, 0, 0, 0.7) url($ima) no-repeat 0 50%;
+        background-clip: border-box;
+        background-origin: inherit;
+        background-size: cover;
+        opacity: 1;
+        td {
+          width: 2.7rem;
+          height: 2.7rem;
+          border: 1px solid white;
+        }
+      }
+    }
+  }
+  
+  .radar,
+  .hit,
+  .miss {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  .hit {
+    background-image: url("https://icons555.com/images/icons-red/image_icon_boat_8_pic_512x512.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: blip;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .miss {
+    background-image: url("https://cdn4.iconfinder.com/data/icons/medical-red-2/512/biohazard-512.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: blip;
+    animation-timing-function: ease-in-out;
+  }
+  .game-board {
+    color: whitesmoke;
+    text-align: center;
+    font-family: fantasy;
+  }
+  #input-console {
+    width: 100%;
+    form {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      margin-top: 20px;
+      //margin-bottom: 10px;
+      border: white 2px ridge;
+      input {
+        margin: 10px;
+      }
+      #fire-button {
+        background-color: red;
+        color: white;
+        font-size: 15px;
+      }
+      #user-input {
+        font-size: 15px;
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
+  .table1 {
+    display: none;
+    margin-top: 25px;
+    border: white 1px solid;
+    text-align: center;
+    font-family: fantasy;
+    width: 35%;
+    margin: auto;
+    tr {
+      text-align: center;
+      td {
+        font-size: 15px;
+      }
+    }
+  }
+  
+  .tablev {
+    margin-top: 5px;
+    font-family: fantasy;
+    text-align: center;
+    color: green;
+  }
+  
+  @media (max-width: 1000px) {
+    .table {
+      display: none;
+    }
+    .table1 {
+      display: block;
+    }
+    .cnto {
+      display: block;
+      width: 100%;
+      .uno {
+        margin: auto;
+        width: 80%;
+        margin-bottom: 15px;
+        .contenido {
+          width: 100%;
+          #message-area {
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .dos {
+        width: 100%;
+      }
+    }
+  }
+  
+  @media (max-width: 750px) {
+    .cnto {
+      display: block;
+      width: 100%;
+      .uno {
+        margin: auto;
+        width: 80%;
+        margin-bottom: 15px;
+        height: 150px;
+        .contenido {
+          width: 100%;
+          #message-area {
+            text-align: center;
+            width: 100%;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+          }
+        }
+      }
+      .dos {
+        width: 100%;
+        #game-board-container {
+          width: 90%;
+          margin: auto;
+          .game-board-wrapper {
+            .game-board {
+              background-size: contain;
+              background-repeat: repeat-y;
+            }
+          }
+        }
+      }
+    }
+    #input-console {
+      width: 70%;
+      margin: auto;
+      form {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+        //margin-bottom: 10px;
+        border: white 2px ridge;
+        input {
+          margin: 10px;
+          width: 60%;
+        }
+        #fire-button {
+          background-color: red;
+          color: white;
+          font-size: 15px;
+        }
+        #user-input {
+          font-size: 15px;
+          text-align: center;
+          background-color: black;
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  

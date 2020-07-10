@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare const alerta3:any;
+declare const alemania:any;
 @Component({
   selector: 'app-tablero4',
   templateUrl: './tablero4.component.html',
@@ -12,6 +12,6 @@ export class Tablero4Component implements OnInit {
   ngOnInit(): void {
   }
   my() {
-    alerta3();
+    alemania();
   }
 }

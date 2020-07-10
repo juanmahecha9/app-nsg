@@ -1,12 +1,12 @@
 <main>
-   <div style="width: 100%;" class="contanier pd-5 mt-4">
-    <button style="margin-left: 50px;" type="button" class="btn btn-outline-success" routerLink="/africa">REGRESAR AL MAPA</button>
+  <div class="container pd-5 mt-4">
+    <button style="margin-left: 50px;" type="button" class="btn btn-outline-success" routerLink="/africa" style="font-family: verdana;">REGRESAR AL MAPA</button>
    </div>
-   <h3 style="color: red; text-align: center;font-family: fantasy;">EGIPTO LEVEL</h3>
+   <h3 style="color: red; text-align: center;font-family: fantasy;">Egipto level</h3>
     <div class="cnto">
         <div class="uno">
             <div class="contenido">
-                <div id="message-area">
+                <div id="message-area" style="font-family: fantasy;">
                   Estado: <br /><br>
                   <span style="color: red;" id="message"></span>                  
                 </div>
@@ -194,11 +194,12 @@
                 
                 <div id="input-console">
                     <form>
-                      <input
-                        type="text"
-                        id="user-input"
-                        placeholder="COORDENADA"
-                      />
+                     <input
+                  type="text"
+                  id="user-input"
+                  placeholder="COORDENADA"
+                  autofocus
+                />
                       <input type="button" id="fire-button" value="Fuego!" (click)="my()"/>
                     </form>
                     <table style="margin-top: 25px; text-align: center;" class="table1" >
@@ -206,24 +207,23 @@
                           <td style="color: whitesmoke;margin-top: 5px ;font-family: fantasy;text-align: center;">Barcos con la cura</td>
                         </tr>
                         <tr>
-                          <td style="margin-top: 5px ;font-family: fantasy;text-align: center;">Fragata Will  5</td>
+                          <td style="margin-top: 5px ;font-family: fantasy;text-align: center; color: green;">Fragata Will  5</td>
                       </tr>
                       <tr>
-                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;">C.B Victoria 4</td>
+                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;color: green;">C.B Victoria 4</td>
         
                       </tr>
                       <tr>
-                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;">PW Romanian 3</td>
+                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;color: green;">PW Romanian 3</td>
                       
                       </tr>
                       <tr>
-                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;">SS Corvetta 3</td>
+                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;color: green;">SS Corvetta 3</td>
                         
                       </tr>
                       <tr>
-                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;">Destroyer 2</td>
-                       
-                      </tr>
+                        <td style="margin-top: 5px ;font-family: fantasy;text-align: center;color: green;">Destroyer 2</td>
+                                             </tr>
                      </table>
                   </div>
                 </div>

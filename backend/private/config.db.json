@@ -1,7 +1,0 @@
-{
-  "database": {
-    "databaseName": "UserRegister",
-    "url": "mongodb://localhost:27017/Users",
-    "web": "nsg:nsg123"
-  }
-}
