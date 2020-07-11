@@ -1,0 +1,60 @@
+
+.tag-container {
+    text-decoration: none;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Roboto,"Liberation Sans",Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    width: 35rem;
+    color: #000;;
+    border-radius: 5rem;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 30px 30px 62px red, 
+              -30px -30px 62px red;
+    transition: all .2s ease-out;
+  }
+  
+  .tag-container:hover {
+    transform: perspective(300px) translate3d(0, 0, 10px);
+    box-shadow: 30px 30px 62px red, 
+    -30px -30px 62px red;
+    
+  }
+  
+  
+  
+  .logo {
+    width: 25%;
+    padding-top: .6rem;
+    margin-right: .5rem;
+    font-size: 4.5rem;
+    text-align: center;
+  }
+  
+  .info h1 {
+    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+  
+  .info h4 {
+    font-family: "SF Mono",Menlo,Consolas,"Liberation Mono",Monaco,"Roboto Mono","Lucida Sans Typewriter",monospace;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: .1rem;
+    margin-top: 10px;
+    color: #000000;
+  }
+  
+  [debug] {
+    border: 1px dashed magenta;
+  }
+
+  @media(max-width:768px) {
+   .tag-container{
+    width: 25rem;
+   }
+}
+

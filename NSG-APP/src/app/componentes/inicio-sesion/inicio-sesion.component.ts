@@ -28,7 +28,7 @@ export class InicioSesionComponent implements OnInit {
           //console.log(res);
           alert('inico de sesion')
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/world-map']);
+          this.router.navigate(['/USER']);
         },
         err => {
           alert('Inicio de sesion erroneo, vuelva a intentar')

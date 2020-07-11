@@ -7,7 +7,7 @@ import * as $ from 'jquery';
   styleUrls: ['./botones-mapa.component.scss']
 })
 export class BotonesMapaComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {

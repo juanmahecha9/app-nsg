@@ -6,7 +6,9 @@ import { from } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private url = 'https://nsglogin.herokuapp.com/api/';
+  
+//private url = "http://localhost:3001"
+private url = "https://loginnsg.herokuapp.com"
 
   constructor(private http: HttpClient, private router: Router) {}
   /* Solicitus al servidor */
@@ -32,5 +34,9 @@ export class AuthService {
     localStorage.removeItem('token');
     this.router.navigate(['/inicio-sesion']);
     console.log('Cerrar Sesion');
+  }
+
+  private(){
+    return this.http.get<any>(this.url + '/private');
   }
 }

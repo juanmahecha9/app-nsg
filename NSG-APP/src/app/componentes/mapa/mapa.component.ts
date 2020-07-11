@@ -16,9 +16,11 @@ declare global {
   styleUrls: ['./mapa.component.scss'],
 })
 export class MapaComponent implements OnInit {
+ 
   constructor() {}
 
   ngOnInit(): void {
+    
     /* Definicion del mapa con el uso de la libreria de mapel de jquery */
     $('.container').mapael({
       map: {

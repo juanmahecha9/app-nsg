@@ -1,52 +1,32 @@
-main{
-  background-color: #000;
- //background-image: url("../../../assets/fondos/0e61a4c1-0360-4ee2-b9bf-9c75c3cd62c4.jpg");
-// background-attachment: fixed;
-} 
-
-*{
-  font-family: fantasy;
-}
-/* for demo purposes */
-.carta1{
+.conte{
   width: 100%;
-  margin-bottom: 15px;
-  .h12w{
+  .infor{
+    border: 2px whitesmoke ridge;
     width: 50%;
     margin: auto;
+    padding: 5px;
   }
 }
-.conte{
-  width: 33%;
-}
-.card {
-    margin: 10px 10px;
-  opacity: 0.8;
-  height: 20rem
-}
 
-/* Flip Cards CSS */
-.card-container {
+.grid {
   display: grid;
-  perspective: 700px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
 }
 
-.scrollx{
-  width: 100%;
-// height: 1000px;
-
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
-h1, h5 {
-text-align: center;
-color: whitesmoke ;
+.grid .text {
+  padding: 20px;
 }
 
-.textoalienar{
-text-align: center;
-}
 
 .bgr{
+  
   -webkit-box-shadow: inset -1px 0px 27px 5px rgba(255,0,0,1);
   -moz-box-shadow: inset -1px 0px 27px 5px rgba(255,0,0,1);
   box-shadow: inset -1px 0px 27px 5px rgba(255,0,0,1);
@@ -58,7 +38,9 @@ text-align: center;
   -moz-box-shadow: inset -1px 0px 27px 5px rgba(255, 247, 0);
   box-shadow: inset -1px 0px 27px 5px rgba(255, 247, 0);
   background-color: #000;
+  
 }
+
 
 .bgv{
   -webkit-box-shadow: inset -1px 0px 27px 5px rgb(0, 255, 21);
@@ -66,9 +48,25 @@ text-align: center;
   box-shadow: inset -1px 0px 27px 5px rgb(0, 255, 21);
   background-color: #000;
 }
+
+
 .bgd{
   -webkit-box-shadow: inset -1px 0px 27px 5px rgba(255,255,255,1);
   -moz-box-shadow: inset -1px 0px 27px 5px rgba(255,255,255,1);
   box-shadow: inset -1px 0px 27px 5px rgba(255,255,255,1);
   background-color: #000;
+}
+
+
+@media (max-width: 1000px){
+  .conte{
+    width: 100%;
+    .infor{
+      border: 2px whitesmoke ridge;
+      width: 95%;
+      margin: auto;
+      padding: 5px;
+    }
+  }
+ 
 }

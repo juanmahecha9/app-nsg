@@ -42,6 +42,7 @@ import { Tablero5Component } from './componentes/tablero5/tablero5.component';
 import { Tablero6Component } from './componentes/tablero6/tablero6.component';
 import { InstruccionesComponent } from './componentes/instrucciones/instrucciones.component';
 import { Tablero7Component } from './componentes/tablero7/tablero7.component';
+import { UserLoginComponent } from './compentes/user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { Tablero7Component } from './componentes/tablero7/tablero7.component';
     Tablero6Component,
     InstruccionesComponent,
     Tablero7Component,
+    UserLoginComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],

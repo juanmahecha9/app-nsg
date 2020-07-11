@@ -42,6 +42,5 @@ export class DatosCovidService {
     /* retornar con el motodo get */
     return this.http.get(this.url + '/data').pipe((res) => res);
   }
-
  
 }
