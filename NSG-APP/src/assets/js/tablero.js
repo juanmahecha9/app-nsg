@@ -3,7 +3,7 @@ function egipto(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 35){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }
@@ -247,7 +247,7 @@ function usa(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 48){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }
@@ -478,7 +478,7 @@ function belice(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 28){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }
@@ -711,7 +711,7 @@ function colombia(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 57){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }
@@ -941,7 +941,7 @@ function alemania(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 30){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }
@@ -1174,7 +1174,7 @@ function china(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 75){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }
@@ -1404,7 +1404,7 @@ function australia(){
   var contador = 100;
   function con(c){
 
-    if(c < 97){
+    if(c < 35){
       document.getElementById("ms").textContent = "El virus te ha derrotado, ya es inútil buscar la cura";
     } 
   }

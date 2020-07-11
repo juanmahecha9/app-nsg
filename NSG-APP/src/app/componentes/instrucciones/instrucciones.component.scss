@@ -1,0 +1,17 @@
+table {
+  border: 1px red solid;
+  margin: auto;
+  thead {
+    padding: 15px;
+    td {
+      border: 1px red solid;
+    }
+  }
+  tbody {
+    text-align: center;
+    tr {
+      padding: 15px;
+    }
+  }
+  margin-bottom: 50px;
+}
