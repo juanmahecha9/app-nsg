@@ -8,6 +8,13 @@
   }
 }
 
+main{
+  background-image: url("https://previews.123rf.com/images/grandeduc/grandeduc1509/grandeduc150900013/44574854-globos-biohazard-3d-rinden-de-globos-con-s%C3%ADmbolo-de-riesgo-biol%C3%B3gico.jpg");
+  box-sizing: border-box;
+ background-attachment: fixed;
+  height: 100%;
+  }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

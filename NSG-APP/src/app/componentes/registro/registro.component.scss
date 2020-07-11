@@ -1,84 +1,172 @@
-.contenedorForm {
-    width: 100%;
-    margin-top: 100px;
-}
-
-.contenedor {
-    width: 100%;
-    padding: 1px;
-}
-
-.formulario {
-    background-color: rgba(165, 165, 165, .8);
-    margin-top: 1px;
-    padding: 10px;
-}
-
-h1 {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-}
-
-input[type="text"],
-input[type="password"] {
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-    background: rgba(240, 240, 240, 0.5);
-}
-
-.input-contenedor {
-    margin-bottom: 15px;
-    border: 1px solid white;
-}
-
-.icon {
-    min-width: 50px;
-    text-align: center;
-    color: white;
-}
-
-.button {
-    border: none;
-    width: 90%;
-    color: white;
-    font-size: 20px;
-    background: #1a2537;
-    padding: 15px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background: cadetblue;
-    transition: all .5s ease;
-}
-
-p {
-    text-align: center;
-    color: white;
-}
-
-.link {
+.tag-container {
+  
     text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: all .5s ease;
-
-}
-
-.link:hover {
-    color: cadetblue;
-}
-
-@media(min-width:768px) {
-    .formulario {
-        margin: auto;
-        width: 500px;
-        margin-top: 50px;
-        border-radius: 2%;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue",Helvetica,Roboto,"Liberation Sans",Arial,sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem;
+    width: 35rem;
+    color: #000;;
+    border-radius: 0rem;
+       transition: all .2s ease-out;
+       .margent{
+           margin-top: 20rem;
+       }
+  }
+  main{
+    background-image: url("https://previews.123rf.com/images/grandeduc/grandeduc1509/grandeduc150900013/44574854-globos-biohazard-3d-rinden-de-globos-con-s%C3%ADmbolo-de-riesgo-biol%C3%B3gico.jpg");
+    box-sizing: border-box;
+   background-attachment: fixed;
+    height: 100vh
     }
-}
+    .contenedor {
+        width: 100%;
+        padding: 1px;
+    }
+    .formulario {
+        background-color: rgba(165, 165, 165, .8);
+     
+        padding: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        font-size: 20px;
+        width: 82%;
+        padding: 10px;
+        border: none;
+        background: rgba(240, 240, 240, 0.5);
+    }
+    
+    .input-contenedor {
+        margin-bottom: 15px;
+        border: 1px solid white;
+    }
+    
+    .icon {
+        min-width: 50px;
+        text-align: center;
+        color: white;
+    }
+    
+    .button {
+        border: none;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        background: #1a2537;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .button:hover {
+        background: cadetblue;
+        transition: all .5s ease;
+    }
+    p {
+        text-align: center;
+        color: white;
+    }
+    .link {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: all .5s ease;
+    
+    }
+    
+    .link:hover {
+        color: cadetblue;
+    }
+    .contenderorForm {
+        width: 100%;
+       
+    }
+    
+    .contenedor {
+        width: 100%;
+        padding: 1px;
+    }
+    
+    .formulario {
+        background-color: rgba(165, 165, 165, .8);
+     
+        padding: 10px;
+    }
+    
+    h1 {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+        font-size: 20px;
+        width: 82%;
+        padding: 10px;
+        border: none;
+        background: rgba(240, 240, 240, 0.5);
+    }
+    
+    .input-contenedor {
+        margin-bottom: 15px;
+        border: 1px solid white;
+    }
+    
+    .icon {
+        min-width: 50px;
+        text-align: center;
+        color: white;
+    }
+    
+    .button {
+        border: none;
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        background: #1a2537;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .button:hover {
+        background: cadetblue;
+        transition: all .5s ease;
+    }
+    
+    p {
+        text-align: center;
+        color: white;
+    }
+    
+    .link {
+        text-decoration: none;
+        color: white;
+        font-weight: 600;
+        transition: all .5s ease;
+    
+    }
+    
+    .link:hover {
+        color: cadetblue;
+    }
 
+    @media(max-width:1500px) {
+        .tag-container { .margent{
+            margin-top: 13rem;
+        }}
+    }
+    @media(max-width:700px) {
+        .tag-container { width: 95%; margin: auto;}
+    }
