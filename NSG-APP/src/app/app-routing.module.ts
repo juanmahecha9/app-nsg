@@ -27,7 +27,8 @@ import { Tablero5Component } from './componentes/tablero5/tablero5.component'
 import { Tablero6Component } from './componentes/tablero6/tablero6.component'
 import { Tablero7Component } from './componentes/tablero7/tablero7.component'
 import { InstruccionesComponent } from './componentes/instrucciones/instrucciones.component'
-
+/* tablero8 */
+import { Tablero8Component } from './componentes/tablero8/tablero8.component'
 
 /* prueba */
 import { UserLoginComponent } from './compentes/user-login/user-login.component'
@@ -147,6 +148,11 @@ const routes: Routes = [
     component: UserLoginComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path: 'tablero-canada',
+    component: Tablero8Component,
+    canActivate: [AuthGuard],
+  }
   
 ];
 
