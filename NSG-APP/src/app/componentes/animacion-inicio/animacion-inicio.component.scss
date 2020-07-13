@@ -9,13 +9,27 @@ p {
   color: whitesmoke;
 }
 
+$ima: "https://i.pinimg.com/originals/37/37/65/373765c397ead80fb25e6d09529ff693.jpg";
 main {
   padding: 100px;
-  background-image: url("https://previews.123rf.com/images/grandeduc/grandeduc1509/grandeduc150900013/44574854-globos-biohazard-3d-rinden-de-globos-con-s%C3%ADmbolo-de-riesgo-biol%C3%B3gico.jpg");
+  background-image: url($ima);
+  background-size: cover;
   box-sizing: border-box;
   height: 100%;
   margin: 0 auto;
   background-attachment: fixed;
+}
+@media (max-width: 2100px) {
+  main {
+    padding: 80px;
+    padding: 100px;
+    background-image: url($ima);
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0 auto;
+    background-attachment: fixed;
+  }
 }
 
 @media (max-width: 1000px) {
