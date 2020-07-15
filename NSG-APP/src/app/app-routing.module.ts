@@ -19,6 +19,8 @@ import { SurAmericaComponent } from './componentes/sur-america/sur-america.compo
 import { AuthService } from './services/auth.service';
 import { ListaDatosCovidComponent } from './componentes/lista-datos-covid/lista-datos-covid.component';
 
+import { CuidadosComponent } from './componentes/cuidados/cuidados.component'
+
 import { Tablero1Component }  from './componentes/tablero1/tablero1.component'
 import { Tablero2Component } from './componentes/tablero2/tablero2.component'
 import { Tablero3Component } from './componentes/tablero3/tablero3.component'
@@ -152,6 +154,10 @@ const routes: Routes = [
     path: 'tablero-canada',
     component: Tablero8Component,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'seguridad',
+    component: CuidadosComponent
   }
   
 ];

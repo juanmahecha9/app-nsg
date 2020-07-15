@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     padding: 1rem 2rem;
-    width: 35rem;
+    width: 40rem;
     color: #000;;
     border-radius: 0rem;
        transition: all .2s ease-out;
@@ -17,7 +17,7 @@
   }
   $ima: "https://i.pinimg.com/originals/37/37/65/373765c397ead80fb25e6d09529ff693.jpg";
   main {
-    padding: 100px;
+   
     background-image: url($ima);
     background-size: cover;
     box-sizing: border-box;
